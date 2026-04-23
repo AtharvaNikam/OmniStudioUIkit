@@ -1,0 +1,87 @@
+/* ================================================================
+   OMNI STUDIO — Design tokens
+   Mirror of D:\Code\OmniStudio\OmniStudioTheme\omni-studio\assets\css\tokens.css
+   Do not invent new tokens — extend here and document in the UI kit skill.
+   ================================================================ */
+
+:root {
+  /* ink */
+  --ink-900: #0A0E12;
+  --ink-800: #11161C;
+  --ink-700: #1A222B;
+  --ink-600: #2A3542;
+  --ink: var(--ink-900);
+
+  /* slate */
+  --slate-500: #4A5A6E;
+  --slate-400: #6B7B90;
+  --slate-300: #8B9AAE;
+  --slate-200: #B8C1CC;
+  --slate-100: #DCE2E8;
+  --slate-50:  #EEF1F4;
+
+  /* paper */
+  --bone-200: #EBE4D4;
+  --bone-100: #F5F1E8;
+  --bone-50:  #FBF8F1;
+  --ivory:    #FAF7F0;
+  --paper:    #FFFFFF;
+
+  /* signal (amber) — CTA, trust */
+  --signal-700: #92400E;
+  --signal-600: #B45309;
+  --signal-500: #D97706;
+  --signal-400: #F59E0B;
+  --signal-100: #FCE4BD;
+  --signal-50:  #FEF3E2;
+  --signal: var(--signal-500);
+
+  /* pulse (emerald) — live indicators only */
+  --pulse-500: #10B981;
+  --pulse-400: #34D399;
+
+  /* semantic */
+  --bg:        var(--ivory);
+  --bg-alt:    var(--bone-100);
+  --text:      var(--ink-900);
+  --text-mute: var(--slate-500);
+  --text-dim:  var(--slate-400);
+  --border:    rgba(10, 14, 18, 0.08);
+  --border-strong: rgba(10, 14, 18, 0.16);
+  --danger: #B91C1C;
+
+  /* type */
+  --font-sans:    'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --fs-eyebrow: 0.6875rem;
+  --fs-micro:   0.8125rem;
+  --fs-body-sm: 0.9375rem;
+  --fs-body:    1rem;
+  --fs-body-lg: 1.0625rem;
+
+  /* radius */
+  --r-sm:   8px;
+  --r-md:   14px;
+  --r-lg:   20px;
+  --r-xl:   28px;
+  --r-full: 999px;
+
+  /* motion */
+  --ease-out:    cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.18, 1);
+  --dur-fast:  180ms;
+  --dur-med:   340ms;
+  --dur-slow:  620ms;
+
+  /* elevation */
+  --shadow-sm: 0 1px 2px rgba(10,14,18,0.04), 0 1px 1px rgba(10,14,18,0.03);
+  --shadow-md: 0 8px 24px -8px rgba(10,14,18,0.08), 0 4px 10px -4px rgba(10,14,18,0.04);
+  --shadow-lg: 0 24px 60px -16px rgba(10,14,18,0.14), 0 8px 24px -8px rgba(10,14,18,0.06);
+  --shadow-glow-signal: 0 0 0 1px rgba(217,119,6,0.22), 0 10px 30px -10px rgba(217,119,6,0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 60ms !important; }
+}
