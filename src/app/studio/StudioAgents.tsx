@@ -29,7 +29,7 @@ export function StudioAgents() {
             />
             <Input
               placeholder="Search the roster…"
-              style={{ minWidth: 260 }}
+              style={{ flex: 1, minWidth: 180 }}
               leading={
                 <svg
                   width="14"

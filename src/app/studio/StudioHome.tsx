@@ -42,7 +42,7 @@ export function StudioHome() {
         <header style={{ display: "flex", justifyContent: "space-between", marginBottom: 14 }}>
           <Eyebrow>Pick a playbook</Eyebrow>
         </header>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 }}>
+        <div className="grid grid--3" style={{ gap: 14 }}>
           <Card hover style={{ padding: "18px 20px" }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 8 }}>
               <Badge tone="live">live</Badge>
