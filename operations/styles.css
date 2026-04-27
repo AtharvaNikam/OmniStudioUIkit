@@ -1,0 +1,121 @@
+/* =================================================================
+   Omni Studio — OPERATIONS (on top of ../prototype/styles.css)
+   Only page-specific tweaks live here; primitives are shared.
+   ================================================================= */
+
+/* Dashboard grid */
+.dash-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 1100px) { .dash-grid { grid-template-columns: 1fr; } }
+
+/* CRM filter pills row */
+.filter-row {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  padding: 14px 0 22px;
+}
+.filter-pill {
+  padding: 8px 14px;
+  border-radius: var(--r-full);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  color: var(--text-mute);
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all var(--dur-fast) var(--ease-out);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.filter-pill:hover { color: var(--ink); border-color: var(--border-strong); }
+.filter-pill.is-active { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+.filter-pill__count {
+  font-size: 10px; padding: 1px 6px; border-radius: var(--r-full);
+  background: var(--bone-100); color: var(--text-mute);
+}
+.filter-pill.is-active .filter-pill__count { background: rgba(250,247,240,0.15); color: var(--ivory); }
+
+/* Dispatch board specific sizes */
+.dispatch-wrap { display: grid; grid-template-columns: 1fr 280px; gap: 20px; align-items: start; }
+@media (max-width: 1200px) { .dispatch-wrap { grid-template-columns: 1fr; } }
+
+/* Marketing channel chips */
+.channel-mix { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 900px) { .channel-mix { grid-template-columns: 1fr; } }
+.channel-tile {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 16px 18px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.channel-tile__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
+.channel-tile__num { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; letter-spacing: -0.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.channel-tile__sub { font-family: var(--font-mono); font-size: 11px; color: var(--text-mute); }
+
+/* Inventory truck summary */
+.truck-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 1100px) { .truck-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .truck-grid { grid-template-columns: 1fr; } }
+.truck-card {
+  background: var(--paper); border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.truck-card__head { display: flex; justify-content: space-between; align-items: center; }
+.truck-card__name { font-family: var(--font-display); font-weight: 500; font-size: 1rem; letter-spacing: -0.015em; color: var(--ink); }
+.truck-card__sub { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
+.truck-card__health {
+  height: 6px;
+  background: var(--bone-100);
+  border-radius: var(--r-full); overflow: hidden;
+}
+.truck-card__health__fill { height: 100%; background: linear-gradient(90deg, var(--signal) 0%, var(--signal-600) 100%); }
+
+/* Payments: quick filters */
+.date-range {
+  display: inline-flex;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  padding: 4px;
+  gap: 2px;
+}
+.date-range button {
+  padding: 6px 12px;
+  border-radius: var(--r-full);
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+}
+.date-range button.is-active { background: var(--ink); color: var(--ivory); }
+
+/* Accounting P&L table */
+.pnl-table td.section-head {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: var(--bone-50);
+}
+.pnl-table tr.total td {
+  border-top: 2px solid var(--ink);
+  font-weight: 500;
+  color: var(--ink);
+}
+.pnl-table tr.total--amber td { border-top-color: var(--signal); }
+
+/* Leads funnel with amber pulse on active stage */
+.stage-active .funnel__bar { outline: 2px solid var(--signal-400); outline-offset: 2px; }
+
+/* Shared helpers */
+.row { display: flex; align-items: center; gap: 12px; }
+.row--between { justify-content: space-between; }
+.stack { display: flex; flex-direction: column; gap: 12px; }
+.stack--lg { gap: 24px; }
+.muted-num { color: var(--text-dim); font-family: var(--font-mono); font-variant-numeric: tabular-nums; }

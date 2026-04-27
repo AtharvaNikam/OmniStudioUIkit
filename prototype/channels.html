@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Omni Studio — Lines &amp; Channels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="channels">
+
+<div class="titlebar"></div>
+
+<div class="app">
+  <aside class="sidebar" aria-label="Primary"></aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="page-eyebrow">Lines &amp; channels</span>
+        <h1 class="page-title">Every way a customer <em>might reach you.</em></h1>
+        <p class="page-subtitle">Route inbound voice, SMS, email, web chat, and Google Business Messages to the right agent — in your area code, in your voice.</p>
+      </div>
+    </header>
+
+    <div class="grid grid--2">
+
+      <!-- Inbound Phone -->
+      <article class="card card--hover channel-card">
+        <div class="channel-card__head">
+          <span class="list-card__icon tile-ink" style="width: 48px; height: 48px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 01-1 1H7a14 14 0 0010 10v-1a1 1 0 011-1h3a1 1 0 011 1v2a1 1 0 01-1 1A17 17 0 015 4z"/></svg>
+          </span>
+          <div>
+            <h3 class="channel-card__title">Inbound Phone</h3>
+            <p class="channel-card__sub">(602) 555-0142 · Phoenix · <a href="#">View routing rules</a></p>
+          </div>
+          <span class="badge badge--live channel-card__status">routing</span>
+        </div>
+        <div class="channel-card__stats">
+          <div class="stat-pill"><span class="stat-pill__label">Calls · 30d</span><span class="stat-pill__val">1,284</span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Booked</span><span class="stat-pill__val">82<span style="color:var(--text-dim); font-size: 0.85rem;">%</span></span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Avg pickup</span><span class="stat-pill__val">0.9<span style="color:var(--text-dim); font-size: 0.85rem;">s</span></span></div>
+        </div>
+        <a class="channel-card__config" href="#">
+          <span class="plus">→</span>
+          <div>
+            <b>Dispatcher · Emergency Triage</b>
+            Routes after-hours to on-call tech · daytime overflow to dispatch
+          </div>
+          <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span>
+        </a>
+      </article>
+
+      <!-- SMS -->
+      <article class="card card--hover channel-card">
+        <div class="channel-card__head">
+          <span class="list-card__icon tile-bone" style="width: 48px; height: 48px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v12H8l-4 4z"/></svg>
+          </span>
+          <div>
+            <h3 class="channel-card__title">SMS</h3>
+            <p class="channel-card__sub">Same number as inbound phone · <a href="#">Opt-out policy</a></p>
+          </div>
+          <span class="badge badge--live channel-card__status">routing</span>
+        </div>
+        <div class="channel-card__stats">
+          <div class="stat-pill"><span class="stat-pill__label">Threads · 30d</span><span class="stat-pill__val">618</span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Reply rate</span><span class="stat-pill__val">71<span style="color:var(--text-dim); font-size: 0.85rem;">%</span></span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Median reply</span><span class="stat-pill__val">22<span style="color:var(--text-dim); font-size: 0.85rem;">s</span></span></div>
+        </div>
+        <a class="channel-card__config" href="#">
+          <span class="plus">→</span>
+          <div>
+            <b>Dispatcher · Invoice Concierge · Review Concierge</b>
+            Auto-routes by intent · confirmations + invoice threads + review asks
+          </div>
+          <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span>
+        </a>
+      </article>
+
+      <!-- Email -->
+      <article class="card card--hover channel-card">
+        <div class="channel-card__head">
+          <span class="list-card__icon tile-slate" style="width: 48px; height: 48px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+          </span>
+          <div>
+            <h3 class="channel-card__title">Email</h3>
+            <p class="channel-card__sub">hello@phoenix-hvac.com · <a href="#">DKIM verified</a></p>
+          </div>
+          <span class="badge badge--live channel-card__status">routing</span>
+        </div>
+        <div class="channel-card__stats">
+          <div class="stat-pill"><span class="stat-pill__label">Sent · 30d</span><span class="stat-pill__val">342</span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Open rate</span><span class="stat-pill__val">64<span style="color:var(--text-dim); font-size: 0.85rem;">%</span></span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Reply rate</span><span class="stat-pill__val">18<span style="color:var(--text-dim); font-size: 0.85rem;">%</span></span></div>
+        </div>
+        <a class="channel-card__config" href="#">
+          <span class="plus">→</span>
+          <div>
+            <b>Estimator · Invoice Concierge</b>
+            Estimate follow-ups + invoice statements · customer email threading
+          </div>
+          <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span>
+        </a>
+      </article>
+
+      <!-- Web Chat -->
+      <article class="card card--hover channel-card">
+        <div class="channel-card__head">
+          <span class="list-card__icon tile-bone" style="width: 48px; height: 48px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v12H12l-5 4v-4H3z"/></svg>
+          </span>
+          <div>
+            <h3 class="channel-card__title">Web Chat</h3>
+            <p class="channel-card__sub">Embed on your site · <a href="#">Copy snippet</a></p>
+          </div>
+          <span class="badge badge--signal channel-card__status">staging</span>
+        </div>
+        <div class="channel-card__stats">
+          <div class="stat-pill"><span class="stat-pill__label">Chats · 30d</span><span class="stat-pill__val">0</span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Bookings</span><span class="stat-pill__val">0</span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Avg reply</span><span class="stat-pill__val stat-pill__val--muted">—</span></div>
+        </div>
+        <a class="channel-card__config" href="#">
+          <span class="plus">+</span>
+          <div>
+            <b>Choose routing</b>
+            Pick an agent or a round-robin · drops to SMS if chat is idle
+          </div>
+          <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span>
+        </a>
+      </article>
+
+      <!-- Google Business Messages -->
+      <article class="card card--hover channel-card">
+        <div class="channel-card__head">
+          <span class="list-card__icon tile-paper" style="width: 48px; height: 48px; background: var(--bone-100);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18M3 12h18"/></svg>
+          </span>
+          <div>
+            <h3 class="channel-card__title">Google Business Messages</h3>
+            <p class="channel-card__sub">Requires GBP connector · <a href="#">Connect Google Business Profile</a></p>
+          </div>
+          <span class="badge channel-card__status">not linked</span>
+        </div>
+        <div class="channel-card__stats">
+          <div class="stat-pill"><span class="stat-pill__label">Messages</span><span class="stat-pill__val stat-pill__val--muted">—</span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Questions</span><span class="stat-pill__val stat-pill__val--muted">—</span></div>
+          <div class="stat-pill"><span class="stat-pill__label">Reply rate</span><span class="stat-pill__val stat-pill__val--muted">—</span></div>
+        </div>
+        <a class="channel-card__config" href="#">
+          <span class="plus">+</span>
+          <div>
+            <b>Link to connect</b>
+            Requires Google Business Profile verification — we'll guide you through it
+          </div>
+          <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span>
+        </a>
+      </article>
+
+      <!-- Add a line -->
+      <article class="card agent-card--new" style="border-radius: var(--r-lg); min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align:center; cursor: pointer;">
+        <span class="add-circle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+        <h3>Add another line</h3>
+        <p>Spanish-first · or a second market</p>
+      </article>
+
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

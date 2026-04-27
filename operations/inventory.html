@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Omni Studio — Inventory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../prototype/styles.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="inventory">
+
+<div class="titlebar"></div>
+
+<div class="app">
+  <aside class="sidebar" aria-label="Primary"></aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="page-eyebrow">Inventory · Warehouse + 6 trucks</span>
+        <h1 class="page-title">Parts on the shelf, <em>parts on the truck.</em></h1>
+        <p class="page-subtitle">Live stock from the Phoenix warehouse and every service truck. Reorder thresholds trigger POs automatically.</p>
+      </div>
+      <div class="page-actions">
+        <label class="input" style="min-width: 260px;">
+          <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="search" placeholder="SKU, part name, manufacturer…" />
+        </label>
+        <button class="btn btn--accent btn--small">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          New PO
+        </button>
+      </div>
+    </header>
+
+    <nav class="subnav">
+      <a class="subnav__item is-active" href="#">All stock</a>
+      <a class="subnav__item" href="#">Warehouse</a>
+      <a class="subnav__item" href="#">Trucks</a>
+      <a class="subnav__item" href="#">Low stock · 7</a>
+      <a class="subnav__item" href="#">On order · 12</a>
+      <a class="subnav__item" href="#">Price changes</a>
+    </nav>
+
+    <!-- Trucks summary -->
+    <div style="margin-bottom: 28px;">
+      <span class="eyebrow" style="margin-bottom: 14px; display: inline-flex;">Truck loadouts</span>
+      <div class="truck-grid">
+        <div class="truck-card">
+          <div class="truck-card__head">
+            <div><span class="truck-card__sub">Truck 01</span><div class="truck-card__name">Marcus R.</div></div>
+            <span class="badge badge--live">live</span>
+          </div>
+          <div class="truck-card__health"><div class="truck-card__health__fill" style="width: 84%;"></div></div>
+          <span class="muted-num" style="font-size: 11px;">84% loadout · $4,240 value</span>
+        </div>
+        <div class="truck-card">
+          <div class="truck-card__head">
+            <div><span class="truck-card__sub">Truck 02</span><div class="truck-card__name">Elena C.</div></div>
+            <span class="badge badge--live">live</span>
+          </div>
+          <div class="truck-card__health"><div class="truck-card__health__fill" style="width: 62%;"></div></div>
+          <span class="muted-num" style="font-size: 11px;">62% loadout · $2,810 value</span>
+        </div>
+        <div class="truck-card">
+          <div class="truck-card__head">
+            <div><span class="truck-card__sub">Truck 03</span><div class="truck-card__name">Dylan S.</div></div>
+            <span class="badge badge--signal">install-heavy</span>
+          </div>
+          <div class="truck-card__health"><div class="truck-card__health__fill" style="width: 94%;"></div></div>
+          <span class="muted-num" style="font-size: 11px;">94% loadout · $8,420 value</span>
+        </div>
+        <div class="truck-card">
+          <div class="truck-card__head">
+            <div><span class="truck-card__sub">Truck 04</span><div class="truck-card__name">Priya V.</div></div>
+            <span class="badge badge--paused">PTO</span>
+          </div>
+          <div class="truck-card__health"><div class="truck-card__health__fill" style="width: 48%; background: var(--slate-300);"></div></div>
+          <span class="muted-num" style="font-size: 11px;">48% · parked</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="split-layout">
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Part</th>
+              <th>SKU</th>
+              <th>Warehouse</th>
+              <th>On trucks</th>
+              <th class="num">Reorder at</th>
+              <th class="num">Unit cost</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Capacitor · 45/5 μF 370V</strong><div class="cust__sub">Turbo 200 · HVAC</div></td>
+              <td class="mono-cell">CAP-455-370</td>
+              <td class="num">24</td>
+              <td class="num">14</td>
+              <td class="num">10</td>
+              <td class="num">$18.40</td>
+              <td><span class="badge badge--live">healthy</span></td>
+            </tr>
+            <tr>
+              <td><strong>Contactor · 30A 2-pole</strong><div class="cust__sub">Packard C230B</div></td>
+              <td class="mono-cell">CNT-302P</td>
+              <td class="num">8</td>
+              <td class="num">6</td>
+              <td class="num">10</td>
+              <td class="num">$22.10</td>
+              <td><span class="badge badge--signal">low · order 24</span></td>
+            </tr>
+            <tr>
+              <td><strong>Refrigerant R-410A</strong><div class="cust__sub">25 lb cylinder</div></td>
+              <td class="mono-cell">REF-410A-25</td>
+              <td class="num">6</td>
+              <td class="num">9</td>
+              <td class="num">4</td>
+              <td class="num">$148.00</td>
+              <td><span class="badge badge--live">healthy</span></td>
+            </tr>
+            <tr>
+              <td><strong>Blower motor · 1/2 HP ECM</strong><div class="cust__sub">Variable speed</div></td>
+              <td class="mono-cell">MTR-12H-ECM</td>
+              <td class="num">2</td>
+              <td class="num">1</td>
+              <td class="num">3</td>
+              <td class="num">$342.00</td>
+              <td><span class="badge" style="color:#B91C1C; border-color:rgba(185,28,28,0.3); background:rgba(185,28,28,0.06);">stockout risk</span></td>
+            </tr>
+            <tr>
+              <td><strong>Thermostat · smart</strong><div class="cust__sub">Ecobee SmartThermostat Premium</div></td>
+              <td class="mono-cell">TST-ECO-PRM</td>
+              <td class="num">18</td>
+              <td class="num">4</td>
+              <td class="num">8</td>
+              <td class="num">$208.00</td>
+              <td><span class="badge badge--live">healthy</span></td>
+            </tr>
+            <tr>
+              <td><strong>Condenser fan motor · 1/4 HP</strong><div class="cust__sub">Universal replacement</div></td>
+              <td class="mono-cell">MTR-14H-CND</td>
+              <td class="num">11</td>
+              <td class="num">3</td>
+              <td class="num">6</td>
+              <td class="num">$94.00</td>
+              <td><span class="badge badge--live">healthy</span></td>
+            </tr>
+            <tr>
+              <td><strong>Filter · 20×25×1 MERV 11</strong><div class="cust__sub">Case of 12</div></td>
+              <td class="mono-cell">FLT-2025-11</td>
+              <td class="num">82</td>
+              <td class="num">24</td>
+              <td class="num">40</td>
+              <td class="num">$6.20</td>
+              <td><span class="badge badge--live">healthy</span></td>
+            </tr>
+            <tr>
+              <td><strong>Heat exchanger · 80% AFUE</strong><div class="cust__sub">Goodman GMVC80</div></td>
+              <td class="mono-cell">HEX-GMVC80</td>
+              <td class="num">1</td>
+              <td class="num">0</td>
+              <td class="num">2</td>
+              <td class="num">$648.00</td>
+              <td><span class="badge badge--signal">reorder</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="rail">
+        <div><h3>Auto-reorder queue</h3><p style="color: var(--text-mute); font-size: var(--fs-micro); margin: 4px 0 0;">Will fire at 17:00 unless you approve a change.</p></div>
+        <div class="feed" style="margin: 0;">
+          <div class="feed__item" style="grid-template-columns: auto 1fr; padding: 10px 0;">
+            <span class="feed__dot feed__dot--signal">24</span>
+            <div class="feed__body"><strong>Contactor · 30A 2-pole</strong><span> · ~$530 · Supply House</span></div>
+          </div>
+          <div class="feed__item" style="grid-template-columns: auto 1fr; padding: 10px 0;">
+            <span class="feed__dot feed__dot--signal">3</span>
+            <div class="feed__body"><strong>Blower motor · 1/2 HP ECM</strong><span> · ~$1,026 · Distributor A</span></div>
+          </div>
+          <div class="feed__item" style="grid-template-columns: auto 1fr; padding: 10px 0;">
+            <span class="feed__dot feed__dot--signal">2</span>
+            <div class="feed__body"><strong>Heat exchanger · GMVC80</strong><span> · ~$1,296 · Goodman direct</span></div>
+          </div>
+        </div>
+        <button class="btn btn--accent btn--small btn--wide" style="justify-content:center;">Approve all POs</button>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

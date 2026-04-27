@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Omni Studio — Scheduled Tasks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="tasks">
+
+<div class="titlebar"></div>
+
+<div class="app">
+  <aside class="sidebar" aria-label="Primary"></aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="page-eyebrow">The schedule</span>
+        <h1 class="page-title">Tasks your team <em>runs without you.</em></h1>
+        <p class="page-subtitle">Daily briefings, monitoring sweeps, weekly reports, and long-running automations — all scoped to your shop.</p>
+      </div>
+      <div class="page-actions">
+        <button class="btn btn--accent">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          New task
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="tasks-layout">
+      <nav class="tasks-nav" aria-label="Task categories">
+        <button class="tasks-nav__item is-active" data-target="section-daily">Daily</button>
+        <button class="tasks-nav__item" data-target="section-monitoring">Monitoring</button>
+        <button class="tasks-nav__item" data-target="section-reports">Reports</button>
+        <button class="tasks-nav__item" data-target="section-automation">Automation</button>
+      </nav>
+
+      <div>
+        <section class="tasks-section" id="section-daily">
+          <h2 class="tasks-section__title">Daily <em>— every morning, every evening.</em></h2>
+          <div class="grid grid--2">
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-signal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Morning Dispatch Briefing</h3>
+                <p class="list-card__desc">Today's jobs, flagged emergencies from overnight, tech availability, and weather-driven load forecast.</p>
+                <div class="list-card__meta"><span>Daily · 06:30 MST</span><span>→ Dispatch + owner</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-bone">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 01-1 1H7a14 14 0 0010 10v-1a1 1 0 011-1h3a1 1 0 011 1v2a1 1 0 01-1 1A17 17 0 015 4z"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Tech Call Prep</h3>
+                <p class="list-card__desc">For every job on the board: customer history, previous techs, last equipment serviced, open warranty items.</p>
+                <div class="list-card__meta"><span>Daily · 06:00</span><span>→ Tech mobile app</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-slate">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">End-of-Day Revenue Recap</h3>
+                <p class="list-card__desc">Booked revenue, average ticket, conversion, and tomorrow's confirmed appointments — texted to the owner at shop close.</p>
+                <div class="list-card__meta"><span>Daily · 18:00</span><span>→ Owner SMS</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-signal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M8 5v4"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Voicemail &amp; Missed-Call Sweep</h3>
+                <p class="list-card__desc">Every missed number from the last 24h gets a callback attempt and an SMS bridge. Recovered calls booked directly.</p>
+                <div class="list-card__meta"><span>Daily · 07:00 &amp; 13:00</span><span>→ Dispatcher agent</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="tasks-section" id="section-monitoring">
+          <h2 class="tasks-section__title">Monitoring <em>— the silent watchers.</em></h2>
+          <div class="grid grid--2">
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-pulse">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">CRM Sync Health</h3>
+                <p class="list-card__desc">Pings ServiceTitan, Housecall Pro, and Jobber every 90s. Flags stalled webhooks and schedule drift before dispatch notices.</p>
+                <div class="list-card__meta"><span>Continuous</span><span>→ PagerDuty</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-signal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s5 5 5 10a5 5 0 01-10 0c0-2 1-4 2-5-1 3 2 4 3 2 0-2-2-4 0-7z"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Emergency Route Check</h3>
+                <p class="list-card__desc">Confirms the on-call tech's phone is reachable and the emergency line is forwarding correctly. Fires at shift change.</p>
+                <div class="list-card__meta"><span>Every 4h</span><span>→ Dispatch + owner</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-bone">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Invoice Aging Watch</h3>
+                <p class="list-card__desc">Flags every invoice crossing day 30, 45, and 60. Triggers the right tone escalation automatically.</p>
+                <div class="list-card__meta"><span>Hourly</span><span>→ Invoice Concierge</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-slate">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Review Drop Watch</h3>
+                <p class="list-card__desc">Polls Google and Yelp nightly. Pings you within 15 minutes if the rolling 30-day average drops below 4.5★.</p>
+                <div class="list-card__meta"><span>Nightly 02:00</span><span>→ Owner SMS + email</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="tasks-section" id="section-reports">
+          <h2 class="tasks-section__title">Reports <em>— what the team earned this week.</em></h2>
+          <div class="grid grid--2">
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-ink">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h7M7 17h10"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Weekly Revenue Recap</h3>
+                <p class="list-card__desc">Booked-rate, average ticket, after-hours capture, and dollar-for-dollar ROI vs. the pilot baseline.</p>
+                <div class="list-card__meta"><span>Mondays · 08:00</span><span>→ Owner + ops lead</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-bone">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M6 19V9M10 19V5M14 19v-7M18 19V3"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Tech Utilization</h3>
+                <p class="list-card__desc">Hours billed vs. hours scheduled per tech, with drive-time bleed and idle-gap analysis.</p>
+                <div class="list-card__meta"><span>Fridays · 17:00</span><span>→ Dispatch + payroll</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-signal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 6.3 6.5.5-5 4.4 1.5 6.3L12 17.3 6.5 20.5 8 14.2 3 9.8l6.5-.5L12 3z"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">CSAT &amp; Review Pulse</h3>
+                <p class="list-card__desc">New reviews, sentiment, and the quotes we'd pin to your website this week.</p>
+                <div class="list-card__meta"><span>Weekly</span><span>→ Marketing + owner</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-slate">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 13l3-4 4 5 5-7"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Conversion Funnel</h3>
+                <p class="list-card__desc">Call → bookable → booked → dispatched → invoiced → paid. Every leak on one page.</p>
+                <div class="list-card__meta"><span>Monthly · 1st</span><span>→ Leadership</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="tasks-section" id="section-automation">
+          <h2 class="tasks-section__title">Automation <em>— the loops that never stop.</em></h2>
+          <div class="grid grid--2">
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-pulse">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 6.3 6.5.5-5 4.4 1.5 6.3L12 17.3 6.5 20.5 8 14.2 3 9.8l6.5-.5L12 3z"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Post-Job Review Send</h3>
+                <p class="list-card__desc">24h after a completed job, send a two-line review ask. Only to customers we scored as 5★-likely.</p>
+                <div class="list-card__meta"><span>Triggered · 24h post-complete</span><span>→ Review Concierge</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-signal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Overdue Invoice Nudge</h3>
+                <p class="list-card__desc">Day 30: friendly. Day 45: direct. Day 60: escalation. Stops the moment Stripe reports the payment cleared.</p>
+                <div class="list-card__meta"><span>Triggered · invoice aging</span><span>→ Invoice Concierge</span></div>
+              </div>
+            </article>
+            <article class="card card--hover list-card">
+              <span class="list-card__icon tile-bone">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a9 9 0 100 18 9 9 0 000-18zM12 6v6l4 2"/></svg>
+              </span>
+              <div class="list-card__body">
+                <h3 class="list-card__title">Estimate Follow-up Sequence</h3>
+                <p class="list-card__desc">Five touches over ten days for every unsold estimate. Confirmation, value-add, urgency, final offer, archive.</p>
+                <div class="list-card__meta"><span>Triggered · estimate sent</span><span>→ Estimator</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

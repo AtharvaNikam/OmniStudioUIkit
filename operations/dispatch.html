@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Omni Studio — Dispatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../prototype/styles.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="dispatch">
+
+<div class="titlebar"></div>
+
+<div class="app">
+  <aside class="sidebar" aria-label="Primary"></aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="page-eyebrow">Dispatch · Wed Apr 23</span>
+        <h1 class="page-title">Today's board, <em>every tech in view.</em></h1>
+        <p class="page-subtitle">Drag a job, swap a tech, reroute the day. Smart Dispatch keeps the suggestions warm in the right rail.</p>
+      </div>
+      <div class="page-actions">
+        <div class="segmented" role="tablist">
+          <button class="segmented__option is-active">Today</button>
+          <button class="segmented__option">Tomorrow</button>
+          <button class="segmented__option">Week</button>
+        </div>
+        <button class="btn btn--primary btn--small">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          Add job
+        </button>
+      </div>
+    </header>
+
+    <div class="kpi-grid" style="margin-bottom: 24px;">
+      <div class="kpi-card"><span class="kpi-card__label">Jobs scheduled</span><div class="kpi-card__num">23</div><span class="kpi-card__delta kpi-card__delta--flat">▸ 5 unassigned</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">Techs on shift</span><div class="kpi-card__num">6 <span class="unit">/ 7</span></div><span class="kpi-card__delta kpi-card__delta--flat">▸ Priya V. out</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">Projected revenue</span><div class="kpi-card__num">$18,420</div><span class="kpi-card__delta kpi-card__delta--up">▲ on pace</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">Route savings · today</span><div class="kpi-card__num">47<span class="unit">min</span></div><span class="kpi-card__delta kpi-card__delta--up">▲ Route Compressor</span></div>
+    </div>
+
+    <div class="dispatch-wrap">
+      <div class="dispatch">
+        <div class="dispatch__grid">
+          <!-- header row: techs -->
+          <div class="dispatch__cell dispatch__cell--head">Time</div>
+          <div class="dispatch__cell dispatch__cell--head">Marcus R.<small>Truck 01 · HVAC lead</small></div>
+          <div class="dispatch__cell dispatch__cell--head">Elena C.<small>Truck 02 · Emergency on-call</small></div>
+          <div class="dispatch__cell dispatch__cell--head">Dylan S.<small>Truck 03 · Install</small></div>
+          <div class="dispatch__cell dispatch__cell--head">Priya V.<small>Out · PTO</small></div>
+          <div class="dispatch__cell dispatch__cell--head">Jamal K.<small>Truck 05 · Maintenance</small></div>
+          <div class="dispatch__cell dispatch__cell--head">Taylor B.<small>Truck 06 · Apprentice</small></div>
+
+          <!-- 7 AM -->
+          <div class="dispatch__cell dispatch__cell--time">07:00</div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--pulse">Sarah M. · AC repair<small>J-24081 · 1204 E Oak</small></span></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell" style="background: repeating-linear-gradient(45deg, var(--bone-50) 0 6px, var(--bone-100) 6px 12px);"></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--slate">J. Howe · tune-up<small>J-24083 · Gilbert</small></span></div>
+          <div class="dispatch__cell"></div>
+
+          <!-- 9 AM -->
+          <div class="dispatch__cell dispatch__cell--time">09:00</div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--signal">R. Patel · warranty<small>J-24082 · Paradise Valley</small></span></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell" style="background: repeating-linear-gradient(45deg, var(--bone-50) 0 6px, var(--bone-100) 6px 12px);"></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--slate">Filter swap · 3 stops<small>Route · Chandler</small></span></div>
+
+          <!-- 11 AM -->
+          <div class="dispatch__cell dispatch__cell--time">11:00</div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--ink">Lunch</span></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--ink">Lunch</span></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--ink">Lunch</span></div>
+          <div class="dispatch__cell" style="background: repeating-linear-gradient(45deg, var(--bone-50) 0 6px, var(--bone-100) 6px 12px);"></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--ink">Lunch</span></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--ink">Lunch</span></div>
+
+          <!-- 1 PM -->
+          <div class="dispatch__cell dispatch__cell--time">13:00</div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--pulse">J. Howe · tune-up<small>J-24083 · Gilbert</small></span></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--danger">Gas leak · triage<small>J-24090 · 1821 W Caron</small></span></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell" style="background: repeating-linear-gradient(45deg, var(--bone-50) 0 6px, var(--bone-100) 6px 12px);"></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--slate">Commercial PM<small>J-24087 · Metro</small></span></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--slate">Ride-along</span></div>
+
+          <!-- 3 PM -->
+          <div class="dispatch__cell dispatch__cell--time">15:00</div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--signal">Mia N. · install<small>J-24084 · Scottsdale</small></span></div>
+          <div class="dispatch__cell" style="background: repeating-linear-gradient(45deg, var(--bone-50) 0 6px, var(--bone-100) 6px 12px);"></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell"></div>
+
+          <!-- 5 PM -->
+          <div class="dispatch__cell dispatch__cell--time">17:00</div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--slate">A. Ortiz · diag<small>J-24085 · Tempe</small></span></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell"><span class="dispatch-chip dispatch-chip--signal">Install cont.<small>J-24084</small></span></div>
+          <div class="dispatch__cell" style="background: repeating-linear-gradient(45deg, var(--bone-50) 0 6px, var(--bone-100) 6px 12px);"></div>
+          <div class="dispatch__cell"></div>
+          <div class="dispatch__cell"></div>
+        </div>
+      </div>
+
+      <aside class="stack stack--lg" style="gap: 16px;">
+        <div class="chart-box">
+          <div class="chart-head">
+            <div><h3>Unassigned</h3><p>5 jobs · drag to a tech column.</p></div>
+          </div>
+          <div class="stack">
+            <div class="kanban-card">
+              <h4 class="kanban-card__title">Kim H. · AC repair</h4>
+              <div class="kanban-card__meta"><span>J-24088</span><span>Tempe</span><span>2h window</span></div>
+              <span class="kanban-card__value">~$480 · Priority 2</span>
+            </div>
+            <div class="kanban-card">
+              <h4 class="kanban-card__title">Wyatt Co. · quarterly PM</h4>
+              <div class="kanban-card__meta"><span>J-24089</span><span>Scottsdale</span><span>Commercial</span></div>
+              <span class="kanban-card__value">~$1,240 · Priority 3</span>
+            </div>
+            <div class="kanban-card" style="border-color: var(--signal-100); background: var(--signal-50);">
+              <h4 class="kanban-card__title">Emergency · no-heat</h4>
+              <div class="kanban-card__meta"><span>J-24092</span><span>Chandler</span><span>Elena avail @15:30</span></div>
+              <span class="kanban-card__value">Suggest: Elena C.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <div class="chart-head">
+            <div><h3>Smart Dispatch</h3><p>AI route suggestions queued.</p></div>
+            <span class="badge badge--signal">3</span>
+          </div>
+          <div class="stack">
+            <div class="rail__item"><strong>Move J-24087 → Marcus</strong><span>Saves 28 min drive time vs Jamal.</span></div>
+            <div class="rail__item"><strong>Split Wyatt Co. to 2 techs</strong><span>Single truck will run 45 min late.</span></div>
+            <div class="rail__item"><strong>Overflow to tomorrow AM</strong><span>2 low-priority jobs would improve today's margin by $340.</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Omni Studio — Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../prototype/styles.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="marketing">
+
+<div class="titlebar"></div>
+
+<div class="app">
+  <aside class="sidebar" aria-label="Primary"></aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="page-eyebrow">Marketing · April 2026</span>
+        <h1 class="page-title">Where the phone <em>actually rings from.</em></h1>
+        <p class="page-subtitle">Multi-touch attribution across Google Ads, local SEO, referrals, and reviews. Omni Studio ties every call back to its first touch.</p>
+      </div>
+      <div class="page-actions">
+        <div class="date-range">
+          <button>7d</button>
+          <button class="is-active">30d</button>
+          <button>90d</button>
+        </div>
+        <button class="btn btn--accent btn--small">New campaign <span class="arrow">→</span></button>
+      </div>
+    </header>
+
+    <div class="kpi-grid" style="margin-bottom: 24px;">
+      <div class="kpi-card"><span class="kpi-card__label">Leads generated</span><div class="kpi-card__num">248</div><span class="kpi-card__delta kpi-card__delta--up">▲ 22%</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">Cost per lead</span><div class="kpi-card__num">$57</div><span class="kpi-card__delta kpi-card__delta--up">▼ $8 vs March</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">Ad spend</span><div class="kpi-card__num">$14,200</div><span class="kpi-card__delta kpi-card__delta--flat">▸ 72% Google</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">ROAS</span><div class="kpi-card__num">6.8<span class="unit">×</span></div><span class="kpi-card__delta kpi-card__delta--up">▲ target 5.0×</span></div>
+    </div>
+
+    <div class="dash-grid">
+      <div class="stack stack--lg">
+        <div class="chart-box">
+          <div class="chart-head">
+            <div><h3>Attribution by channel</h3><p>248 leads · tied to the first touch.</p></div>
+          </div>
+          <div class="bar-chart">
+            <div class="bar-chart__row"><span class="bar-chart__label">Google Search</span><span class="bar-chart__track"><span class="bar-chart__fill bar-chart__fill--amber" style="width: 92%;"></span></span><span class="bar-chart__value">84 · 34%</span></div>
+            <div class="bar-chart__row"><span class="bar-chart__label">Google LSA</span><span class="bar-chart__track"><span class="bar-chart__fill bar-chart__fill--amber" style="width: 74%;"></span></span><span class="bar-chart__value">68 · 27%</span></div>
+            <div class="bar-chart__row"><span class="bar-chart__label">Referral</span><span class="bar-chart__track"><span class="bar-chart__fill" style="width: 52%;"></span></span><span class="bar-chart__value">48 · 19%</span></div>
+            <div class="bar-chart__row"><span class="bar-chart__label">Organic SEO</span><span class="bar-chart__track"><span class="bar-chart__fill" style="width: 34%;"></span></span><span class="bar-chart__value">31 · 13%</span></div>
+            <div class="bar-chart__row"><span class="bar-chart__label">Direct / repeat</span><span class="bar-chart__track"><span class="bar-chart__fill bar-chart__fill--slate" style="width: 14%;"></span></span><span class="bar-chart__value">12 · 5%</span></div>
+            <div class="bar-chart__row"><span class="bar-chart__label">Other</span><span class="bar-chart__track"><span class="bar-chart__fill bar-chart__fill--slate" style="width: 6%;"></span></span><span class="bar-chart__value">5 · 2%</span></div>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <div class="chart-head">
+            <div><h3>Active campaigns</h3><p>Google Ads · Meta · Local sponsorships</p></div>
+            <span class="eyebrow">6 running</span>
+          </div>
+          <div class="data-table-wrap" style="border: 0;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Campaign</th>
+                  <th>Channel</th>
+                  <th class="num">Spend · 30d</th>
+                  <th class="num">Leads</th>
+                  <th class="num">CPL</th>
+                  <th class="num">ROAS</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>AC Repair · Phoenix metro</strong><div class="cust__sub">High intent, emergency keywords</div></td>
+                  <td>Google Search</td>
+                  <td class="num">$5,840</td>
+                  <td class="num">58</td>
+                  <td class="num">$101</td>
+                  <td class="num">7.2×</td>
+                  <td><span class="badge badge--live">running</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Furnace Tune-Up · Pre-season</strong><div class="cust__sub">Drives maintenance membership signups</div></td>
+                  <td>Google Search</td>
+                  <td class="num">$2,410</td>
+                  <td class="num">42</td>
+                  <td class="num">$57</td>
+                  <td class="num">5.8×</td>
+                  <td><span class="badge badge--live">running</span></td>
+                </tr>
+                <tr>
+                  <td><strong>LSA · 25-mile radius</strong><div class="cust__sub">Google Local Services Ads</div></td>
+                  <td>Google LSA</td>
+                  <td class="num">$3,110</td>
+                  <td class="num">68</td>
+                  <td class="num">$46</td>
+                  <td class="num">9.1×</td>
+                  <td><span class="badge badge--live">running</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Mini-split Installs</strong><div class="cust__sub">High ticket, long sales cycle</div></td>
+                  <td>Google Search</td>
+                  <td class="num">$1,820</td>
+                  <td class="num">14</td>
+                  <td class="num">$130</td>
+                  <td class="num">4.2×</td>
+                  <td><span class="badge badge--signal">underperform</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Neighborhood referral program</strong><div class="cust__sub">$100 credit per closed referral</div></td>
+                  <td>Referral</td>
+                  <td class="num">$420</td>
+                  <td class="num">21</td>
+                  <td class="num">$20</td>
+                  <td class="num">12.6×</td>
+                  <td><span class="badge badge--live">running</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Local sponsorship · Little League</strong><div class="cust__sub">Brand / community</div></td>
+                  <td>Offline</td>
+                  <td class="num">$600</td>
+                  <td class="num">—</td>
+                  <td class="num">—</td>
+                  <td class="num">—</td>
+                  <td><span class="badge">brand</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack stack--lg">
+        <div class="chart-box">
+          <div class="chart-head"><div><h3>Reviews funnel</h3><p>Review Concierge · last 30d.</p></div></div>
+          <div class="funnel">
+            <div class="funnel__row"><span class="funnel__label">Jobs complete</span><div class="funnel__bar funnel__bar--stage1">142</div><span class="funnel__pct">100%</span></div>
+            <div class="funnel__row"><span class="funnel__label">Ask sent</span><div class="funnel__bar funnel__bar--stage2">102</div><span class="funnel__pct">72%</span></div>
+            <div class="funnel__row"><span class="funnel__label">Opened</span><div class="funnel__bar funnel__bar--stage3">68</div><span class="funnel__pct">48%</span></div>
+            <div class="funnel__row"><span class="funnel__label">Posted</span><div class="funnel__bar funnel__bar--stage5">38</div><span class="funnel__pct">27%</span></div>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <div class="chart-head"><div><h3>Channel mix · ad spend</h3><p>Where the $14.2k went.</p></div></div>
+          <div class="channel-mix">
+            <div class="channel-tile">
+              <span class="channel-tile__label">Google Ads</span>
+              <span class="channel-tile__num">$10,240</span>
+              <span class="channel-tile__sub">72% of spend</span>
+            </div>
+            <div class="channel-tile">
+              <span class="channel-tile__label">Meta</span>
+              <span class="channel-tile__num">$1,820</span>
+              <span class="channel-tile__sub">13%</span>
+            </div>
+            <div class="channel-tile">
+              <span class="channel-tile__label">Direct mail</span>
+              <span class="channel-tile__num">$2,140</span>
+              <span class="channel-tile__sub">15%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-box">
+          <div class="chart-head"><div><h3>Top landing pages</h3><p>Conversions · 30d.</p></div></div>
+          <div class="stack">
+            <div class="row row--between"><strong style="font-weight:500;">/ac-repair-phoenix</strong><span class="muted-num">38 leads</span></div>
+            <div class="row row--between"><strong style="font-weight:500;">/emergency-hvac</strong><span class="muted-num">29 leads</span></div>
+            <div class="row row--between"><strong style="font-weight:500;">/maintenance-membership</strong><span class="muted-num">22 leads</span></div>
+            <div class="row row--between"><strong style="font-weight:500;">/install-quote</strong><span class="muted-num">14 leads</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

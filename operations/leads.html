@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Omni Studio — Leads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../prototype/styles.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="leads">
+
+<div class="titlebar"></div>
+
+<div class="app">
+  <aside class="sidebar" aria-label="Primary"></aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="page-eyebrow">Leads pipeline</span>
+        <h1 class="page-title">The funnel <em>and everything in it.</em></h1>
+        <p class="page-subtitle">Every call that arrived this month, every estimate still open, every follow-up the Estimator agent has queued.</p>
+      </div>
+      <div class="page-actions">
+        <div class="segmented">
+          <button class="segmented__option is-active">Pipeline</button>
+          <button class="segmented__option">List</button>
+          <button class="segmented__option">Funnel</button>
+        </div>
+        <button class="btn btn--accent btn--small">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          Log lead
+        </button>
+      </div>
+    </header>
+
+    <!-- Funnel summary -->
+    <div class="chart-box" style="margin-bottom: 24px;">
+      <div class="chart-head">
+        <div><h3>April funnel</h3><p>248 leads · $612k pipeline · 31% win rate MTD.</p></div>
+        <span class="eyebrow">Apr 01 – Apr 23</span>
+      </div>
+      <div class="funnel">
+        <div class="funnel__row"><span class="funnel__label">Inbound</span><div class="funnel__bar funnel__bar--stage1">248</div><span class="funnel__pct">100%</span></div>
+        <div class="funnel__row"><span class="funnel__label">Contacted</span><div class="funnel__bar funnel__bar--stage2">182</div><span class="funnel__pct">73%</span></div>
+        <div class="funnel__row"><span class="funnel__label">Estimated</span><div class="funnel__bar funnel__bar--stage3">124</div><span class="funnel__pct">50%</span></div>
+        <div class="funnel__row stage-active"><span class="funnel__label">Proposal sent</span><div class="funnel__bar funnel__bar--stage4">88</div><span class="funnel__pct">35%</span></div>
+        <div class="funnel__row"><span class="funnel__label">Won</span><div class="funnel__bar funnel__bar--stage5">77</div><span class="funnel__pct">31%</span></div>
+      </div>
+    </div>
+
+    <!-- Kanban -->
+    <div class="kanban">
+      <div class="kanban-col">
+        <div class="kanban-col__head">
+          <span class="kanban-col__title"><span class="dot dot--ink"></span>New</span>
+          <span class="count-badge">14</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">Tanya B. · AC making noise</h4>
+          <div class="kanban-card__meta"><span>Google Ads</span><span>07:42 AM</span></div>
+          <span class="kanban-card__value">Est. $680</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">North Valley Office · mini-split quote</h4>
+          <div class="kanban-card__meta"><span>Referral</span><span>08:14 AM</span></div>
+          <span class="kanban-card__value">Est. $9,200</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">Arjun P. · no-cool emergency</h4>
+          <div class="kanban-card__meta"><span>Direct call</span><span>Just now</span></div>
+          <span class="kanban-card__value">Est. $420</span>
+        </div>
+      </div>
+
+      <div class="kanban-col">
+        <div class="kanban-col__head">
+          <span class="kanban-col__title"><span class="dot"></span>Contacted</span>
+          <span class="count-badge">22</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">Lucas G. · thermostat upgrade</h4>
+          <div class="kanban-card__meta"><span>Website</span><span>2h ago</span></div>
+          <span class="kanban-card__value">Est. $340</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">Desert HOA · commercial PM contract</h4>
+          <div class="kanban-card__meta"><span>LinkedIn</span><span>Yesterday</span></div>
+          <span class="kanban-card__value">Est. $24,000/yr</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">Noor R. · two-stage furnace</h4>
+          <div class="kanban-card__meta"><span>Google Ads</span><span>3d ago</span></div>
+          <span class="kanban-card__value">Est. $6,400</span>
+        </div>
+      </div>
+
+      <div class="kanban-col">
+        <div class="kanban-col__head">
+          <span class="kanban-col__title"><span class="dot dot--amber"></span>Estimated</span>
+          <span class="count-badge">18</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">Mia N. · heat pump install</h4>
+          <div class="kanban-card__meta"><span>Scottsdale</span><span>Quote sent Apr 19</span></div>
+          <span class="kanban-card__value">$9,410 · Priority</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">Ben L. · ductwork repair</h4>
+          <div class="kanban-card__meta"><span>Referral</span><span>Quote sent Apr 17</span></div>
+          <span class="kanban-card__value">$3,820</span>
+        </div>
+        <div class="kanban-card">
+          <h4 class="kanban-card__title">Sunrise Dental · 3-zone retrofit</h4>
+          <div class="kanban-card__meta"><span>Commercial</span><span>Walk-through Apr 21</span></div>
+          <span class="kanban-card__value">$14,900</span>
+        </div>
+      </div>
+
+      <div class="kanban-col">
+        <div class="kanban-col__head">
+          <span class="kanban-col__title"><span class="dot dot--emerald"></span>Won</span>
+          <span class="count-badge">77</span>
+        </div>
+        <div class="kanban-card" style="border-color: rgba(16,185,129,0.22); background: rgba(16,185,129,0.04);">
+          <h4 class="kanban-card__title">Mia N. · booked install ✓</h4>
+          <div class="kanban-card__meta"><span>Today</span><span>Dylan S.</span></div>
+          <span class="kanban-card__value">$9,410</span>
+        </div>
+        <div class="kanban-card" style="border-color: rgba(16,185,129,0.22); background: rgba(16,185,129,0.04);">
+          <h4 class="kanban-card__title">Vale St. Café · PM contract ✓</h4>
+          <div class="kanban-card__meta"><span>Apr 22</span><span>Commercial</span></div>
+          <span class="kanban-card__value">$18,000/yr</span>
+        </div>
+        <div class="kanban-card" style="border-color: rgba(16,185,129,0.22); background: rgba(16,185,129,0.04);">
+          <h4 class="kanban-card__title">Abby T. · mini-split ✓</h4>
+          <div class="kanban-card__meta"><span>Apr 21</span><span>Elena C.</span></div>
+          <span class="kanban-card__value">$5,220</span>
+        </div>
+      </div>
+
+      <div class="kanban-col">
+        <div class="kanban-col__head">
+          <span class="kanban-col__title"><span class="dot dot--rose"></span>Lost</span>
+          <span class="count-badge">11</span>
+        </div>
+        <div class="kanban-card" style="opacity: 0.75;">
+          <h4 class="kanban-card__title">Kelly M. · went with competitor</h4>
+          <div class="kanban-card__meta"><span>Apr 18</span><span>Price</span></div>
+          <span class="kanban-card__value">$4,200</span>
+        </div>
+        <div class="kanban-card" style="opacity: 0.75;">
+          <h4 class="kanban-card__title">Pete R. · DIY</h4>
+          <div class="kanban-card__meta"><span>Apr 14</span><span>No-response × 5</span></div>
+          <span class="kanban-card__value">$780</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

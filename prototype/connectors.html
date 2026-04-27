@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Omni Studio — Integrations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="connectors">
+
+<div class="titlebar"></div>
+
+<div class="app">
+  <aside class="sidebar" aria-label="Primary"></aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="page-eyebrow">Integrations</span>
+        <h1 class="page-title">The tools you already run — <em>now connected.</em></h1>
+        <p class="page-subtitle">Authorize the shops, CRMs, phone carriers, and review platforms the studio needs to work for you. Nothing is shared across pilots.</p>
+      </div>
+    </header>
+
+    <div style="display:flex; align-items:center; gap: 24px; margin-bottom: 24px; flex-wrap: wrap;">
+      <label class="input" style="min-width: 340px;">
+        <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" placeholder="Search integrations…" />
+      </label>
+      <span class="eyebrow">6 connected · 5 available · 4 on the way</span>
+      <span style="flex:1"></span>
+      <a href="#" class="mono" style="color: var(--signal); font-size: var(--fs-micro); letter-spacing: 0.04em;">Refresh status →</a>
+    </div>
+
+    <div class="grid grid--2">
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+        </span>
+        <h3 class="connector-card__title">ServiceTitan</h3>
+        <p class="connector-card__desc">Full two-way sync of customers, jobs, estimates, invoices, and dispatch board.</p>
+        <span class="badge badge--live connector-card__status">connected</span>
+        <a class="connector-card__cta" href="#">Manage →</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12L12 3l9 9M5 10v10h14V10"/></svg>
+        </span>
+        <h3 class="connector-card__title">Housecall Pro</h3>
+        <p class="connector-card__desc">Jobs, estimates, schedule, and customer notes. Booking writes back directly.</p>
+        <span class="badge badge--live connector-card__status">connected</span>
+        <a class="connector-card__cta" href="#">Manage →</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4zM4 10h10v10H4zM16 10h4v10h-4z"/></svg>
+        </span>
+        <h3 class="connector-card__title">Jobber</h3>
+        <p class="connector-card__desc">Customers, quotes, jobs, and visits. Omni books directly into Jobber's schedule.</p>
+        <span class="badge badge--signal connector-card__status">available</span>
+        <a class="connector-card__cta" href="#">+ Connect</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 01-1 1H7a14 14 0 0010 10v-1a1 1 0 011-1h3a1 1 0 011 1v2a1 1 0 01-1 1A17 17 0 015 4z"/></svg>
+        </span>
+        <h3 class="connector-card__title">Twilio Voice</h3>
+        <p class="connector-card__desc">Inbound and outbound voice with sub-1-second latency. Area-code-matched numbers.</p>
+        <span class="badge badge--live connector-card__status">connected</span>
+        <a class="connector-card__cta" href="#">Manage →</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/><circle cx="7" cy="14" r="1" fill="currentColor"/></svg>
+        </span>
+        <h3 class="connector-card__title">Stripe</h3>
+        <p class="connector-card__desc">Payment status powers Invoice Concierge. Stops nudging the moment a charge clears.</p>
+        <span class="badge badge--live connector-card__status">connected</span>
+        <a class="connector-card__cta" href="#">Manage →</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 6.3 6.5.5-5 4.4 1.5 6.3L12 17.3 6.5 20.5 8 14.2 3 9.8l6.5-.5L12 3z"/></svg>
+        </span>
+        <h3 class="connector-card__title">Google Business Profile</h3>
+        <p class="connector-card__desc">Review request links, review monitoring, and GBP question auto-answer.</p>
+        <span class="badge badge--live connector-card__status">connected</span>
+        <a class="connector-card__cta" href="#">Manage →</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </span>
+        <h3 class="connector-card__title">QuickBooks Online</h3>
+        <p class="connector-card__desc">Invoices, payments, and customer matching with the CRM for clean A/R aging.</p>
+        <span class="badge badge--live connector-card__status">connected</span>
+        <a class="connector-card__cta" href="#">Manage →</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+        </span>
+        <h3 class="connector-card__title">Gmail / Google Workspace</h3>
+        <p class="connector-card__desc">Outbound estimate follow-ups, team digests, and customer email threading.</p>
+        <span class="badge badge--signal connector-card__status">available</span>
+        <a class="connector-card__cta" href="#">+ Connect</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9l3 3 7-7"/></svg>
+        </span>
+        <h3 class="connector-card__title">Slack</h3>
+        <p class="connector-card__desc">Daily recaps, emergency pings, and #dispatch live feeds with one-tap approvals.</p>
+        <span class="badge badge--signal connector-card__status">available</span>
+        <a class="connector-card__cta" href="#">+ Connect</a>
+      </article>
+
+      <article class="card card--hover connector-card">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l8 8 8-8M4 18h16"/></svg>
+        </span>
+        <h3 class="connector-card__title">HubSpot</h3>
+        <p class="connector-card__desc">Lead routing from marketing landing pages straight into the Estimator pipeline.</p>
+        <span class="badge badge--signal connector-card__status">available</span>
+        <a class="connector-card__cta" href="#">+ Connect</a>
+      </article>
+
+      <article class="card connector-card connector-card--disabled">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+        </span>
+        <h3 class="connector-card__title">Google Calendar</h3>
+        <p class="connector-card__desc">Owner &amp; tech calendars synced with dispatch. Day-of rescheduling without collisions.</p>
+        <span class="badge connector-card__status">coming soon</span>
+      </article>
+
+      <article class="card connector-card connector-card--disabled">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l4-4h12l4 4-4 4H6l-4-4z"/></svg>
+        </span>
+        <h3 class="connector-card__title">Yelp for Business</h3>
+        <p class="connector-card__desc">Review monitoring plus one-click reply drafting, owner-approved.</p>
+        <span class="badge connector-card__status">coming soon</span>
+      </article>
+
+      <article class="card connector-card connector-card--disabled">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3"/></svg>
+        </span>
+        <h3 class="connector-card__title">Zapier</h3>
+        <p class="connector-card__desc">Fire custom webhooks on every agent event — bookings, invoices, reviews, escalations.</p>
+        <span class="badge connector-card__status">coming soon</span>
+      </article>
+
+      <article class="card connector-card connector-card--disabled">
+        <span class="connector-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A222B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7 12h10M12 7v10"/></svg>
+        </span>
+        <h3 class="connector-card__title">Square</h3>
+        <p class="connector-card__desc">Alternate payment rail for shops not on Stripe. Same A/R logic.</p>
+        <span class="badge connector-card__status">coming soon</span>
+      </article>
+
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

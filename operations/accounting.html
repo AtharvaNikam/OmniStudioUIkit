@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Omni Studio — Accounting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../prototype/styles.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="accounting">
+
+<div class="titlebar"></div>
+
+<div class="app">
+  <aside class="sidebar" aria-label="Primary"></aside>
+
+  <main class="main">
+    <header class="page-header">
+      <div>
+        <span class="page-eyebrow">Accounting · April 2026</span>
+        <h1 class="page-title">The month <em>as the books see it.</em></h1>
+        <p class="page-subtitle">Reconciled nightly with QuickBooks Online. Payroll closes Fridays. Bank feed is 40 minutes behind real-time.</p>
+      </div>
+      <div class="page-actions">
+        <div class="segmented">
+          <button class="segmented__option is-active">MTD</button>
+          <button class="segmented__option">QTD</button>
+          <button class="segmented__option">YTD</button>
+        </div>
+        <button class="btn btn--ghost btn--small">Close month</button>
+        <button class="btn btn--accent btn--small">Send to CPA <span class="arrow">→</span></button>
+      </div>
+    </header>
+
+    <nav class="subnav">
+      <a class="subnav__item is-active" href="#">P&amp;L</a>
+      <a class="subnav__item" href="#">Balance sheet</a>
+      <a class="subnav__item" href="#">A/R aging</a>
+      <a class="subnav__item" href="#">A/P</a>
+      <a class="subnav__item" href="#">Bank feed</a>
+      <a class="subnav__item" href="#">Tax</a>
+    </nav>
+
+    <div class="kpi-grid" style="margin-bottom: 24px;">
+      <div class="kpi-card"><span class="kpi-card__label">Revenue · MTD</span><div class="kpi-card__num">$612,840</div><span class="kpi-card__delta kpi-card__delta--up">▲ 22% YoY</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">Gross margin</span><div class="kpi-card__num">38<span class="unit">%</span></div><span class="kpi-card__delta kpi-card__delta--up">▲ 1.2 pts vs Mar</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">Operating profit</span><div class="kpi-card__num">$94,210</div><span class="kpi-card__delta kpi-card__delta--up">▲ $12.4k vs Mar</span></div>
+      <div class="kpi-card"><span class="kpi-card__label">Cash on hand</span><div class="kpi-card__num">$248,902</div><span class="kpi-card__delta kpi-card__delta--flat">▸ 47 days runway</span></div>
+    </div>
+
+    <div class="split-layout">
+      <div class="chart-box">
+        <div class="chart-head">
+          <div><h3>Profit &amp; Loss · April (MTD)</h3><p>Apr 01 → Apr 23 · Accrual basis</p></div>
+          <span class="badge">as of 06:14</span>
+        </div>
+        <div class="data-table-wrap" style="border: 0; border-radius: 0;">
+          <table class="data-table pnl-table">
+            <thead>
+              <tr>
+                <th>Account</th>
+                <th class="num">MTD</th>
+                <th class="num">Prior MTD</th>
+                <th class="num">Δ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td colspan="4" class="section-head">Revenue</td></tr>
+              <tr><td>Service revenue</td><td class="num">$408,102</td><td class="num">$352,820</td><td class="num" style="color: #047857;">+15.7%</td></tr>
+              <tr><td>Install revenue</td><td class="num">$158,410</td><td class="num">$124,820</td><td class="num" style="color: #047857;">+26.9%</td></tr>
+              <tr><td>Maintenance plans</td><td class="num">$42,840</td><td class="num">$40,220</td><td class="num" style="color: #047857;">+6.5%</td></tr>
+              <tr><td>Warranty recoupment</td><td class="num">$3,488</td><td class="num">$2,994</td><td class="num" style="color: #047857;">+16.5%</td></tr>
+              <tr class="total"><td>Total revenue</td><td class="num">$612,840</td><td class="num">$520,854</td><td class="num" style="color: #047857;">+17.7%</td></tr>
+
+              <tr><td colspan="4" class="section-head">Cost of goods sold</td></tr>
+              <tr><td>Parts &amp; materials</td><td class="num">$204,120</td><td class="num">$178,402</td><td class="num" style="color: #B91C1C;">+14.4%</td></tr>
+              <tr><td>Direct labor</td><td class="num">$148,810</td><td class="num">$124,982</td><td class="num" style="color: #B91C1C;">+19.1%</td></tr>
+              <tr><td>Equipment (installs)</td><td class="num">$28,400</td><td class="num">$22,882</td><td class="num" style="color: #B91C1C;">+24.1%</td></tr>
+              <tr class="total"><td>Total COGS</td><td class="num">$381,330</td><td class="num">$326,266</td><td class="num" style="color: #B91C1C;">+16.9%</td></tr>
+
+              <tr class="total"><td><strong>Gross profit</strong></td><td class="num"><strong>$231,510</strong></td><td class="num">$194,588</td><td class="num" style="color: #047857;"><strong>+19.0%</strong></td></tr>
+
+              <tr><td colspan="4" class="section-head">Operating expenses</td></tr>
+              <tr><td>Wages &amp; payroll tax</td><td class="num">$84,210</td><td class="num">$79,802</td><td class="num" style="color: #B91C1C;">+5.5%</td></tr>
+              <tr><td>Vehicle &amp; fuel</td><td class="num">$18,840</td><td class="num">$19,402</td><td class="num" style="color: #047857;">−2.9%</td></tr>
+              <tr><td>Marketing (Google Ads + SEO)</td><td class="num">$14,200</td><td class="num">$11,980</td><td class="num" style="color: #B91C1C;">+18.5%</td></tr>
+              <tr><td>SaaS &amp; software (incl. Omni Studio)</td><td class="num">$8,940</td><td class="num">$4,120</td><td class="num" style="color: #B91C1C;">+117%</td></tr>
+              <tr><td>Rent &amp; utilities</td><td class="num">$6,200</td><td class="num">$6,200</td><td class="num" style="color: var(--text-dim);">flat</td></tr>
+              <tr><td>Other G&amp;A</td><td class="num">$4,910</td><td class="num">$5,102</td><td class="num" style="color: #047857;">−3.8%</td></tr>
+              <tr class="total"><td>Total OpEx</td><td class="num">$137,300</td><td class="num">$126,606</td><td class="num" style="color: #B91C1C;">+8.4%</td></tr>
+
+              <tr class="total total--amber"><td><strong>Operating profit</strong></td><td class="num"><strong>$94,210</strong></td><td class="num">$67,982</td><td class="num" style="color: #047857;"><strong>+38.6%</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <aside class="rail">
+        <div>
+          <h3>Bank feed · live</h3>
+          <p style="color: var(--text-mute); font-size: var(--fs-micro); margin: 4px 0 0;">Chase Business · ••4108</p>
+        </div>
+        <div class="feed" style="margin: 0;">
+          <div class="feed__item" style="grid-template-columns: auto 1fr; padding: 10px 0;">
+            <span class="feed__dot feed__dot--pulse">+</span>
+            <div class="feed__body"><strong>$3,087.48</strong> · Stripe payout<span> · Today 09:14</span></div>
+          </div>
+          <div class="feed__item" style="grid-template-columns: auto 1fr; padding: 10px 0;">
+            <span class="feed__dot feed__dot--pulse">+</span>
+            <div class="feed__body"><strong>$1,114.40</strong> · ACH · Patel<span> · Today 09:02</span></div>
+          </div>
+          <div class="feed__item" style="grid-template-columns: auto 1fr; padding: 10px 0;">
+            <span class="feed__dot feed__dot--ink">−</span>
+            <div class="feed__body"><strong>$2,410.00</strong> · Supply House<span> · Parts · Today</span></div>
+          </div>
+          <div class="feed__item" style="grid-template-columns: auto 1fr; padding: 10px 0;">
+            <span class="feed__dot feed__dot--ink">−</span>
+            <div class="feed__body"><strong>$84,210</strong> · Gusto payroll<span> · Fri Apr 18</span></div>
+          </div>
+        </div>
+        <div class="rail__item" style="border-top: 1px solid var(--border); padding-top: 12px;"><strong>MTD net inflows</strong><span style="margin-left: auto;" class="muted-num">+$94,210</span></div>
+        <button class="btn btn--ghost btn--small btn--wide" style="justify-content:center;">Reconcile now</button>
+      </aside>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
