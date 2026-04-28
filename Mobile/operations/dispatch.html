@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Mobile · Dispatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <header class="app-header">
+    <a class="app-header__back" href="index.html" aria-label="Back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">Today's board · 5 jobs</span>
+      <span class="app-header__title">Dispatch</span>
+    </div>
+    <button class="app-header__action" aria-label="Filter">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+    </button>
+  </header>
+
+  <main class="content">
+
+    <div class="segmented" role="tablist">
+      <button class="segmented__option is-active" role="tab" aria-selected="true">All · 5</button>
+      <button class="segmented__option" role="tab" aria-selected="false">Live · 1</button>
+      <button class="segmented__option" role="tab" aria-selected="false">Open · 3</button>
+    </div>
+
+    <article class="card">
+      <div class="row row--between" style="align-items:flex-start;">
+        <div class="row" style="gap:10px; align-items:flex-start;">
+          <span class="list__avatar">SM</span>
+          <div>
+            <div style="font-weight:500; color:var(--ink); font-size:15px;">Sarah M. <span class="mono" style="color:var(--text-dim); font-size:11px; letter-spacing:0.04em;">· J-24081</span></div>
+            <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px;">1204 E Oak · Phoenix</div>
+          </div>
+        </div>
+        <span class="badge badge--live">on truck</span>
+      </div>
+      <div class="row row--between" style="padding-top:10px; border-top:1px solid var(--border); font-size:12px;">
+        <div class="row" style="gap:14px;">
+          <span class="mono muted">07:00 – 09:00</span>
+          <span class="mono"><b style="color:var(--ink); font-weight:500;">Marcus R.</b></span>
+        </div>
+        <span class="mono" style="color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums;">$680</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="row row--between" style="align-items:flex-start;">
+        <div class="row" style="gap:10px; align-items:flex-start;">
+          <span class="list__avatar list__avatar--slate">RP</span>
+          <div>
+            <div style="font-weight:500; color:var(--ink); font-size:15px;">Ray Patel <span class="mono" style="color:var(--text-dim); font-size:11px; letter-spacing:0.04em;">· J-24082</span></div>
+            <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px;">Paradise Valley</div>
+          </div>
+        </div>
+        <span class="badge badge--signal">on route</span>
+      </div>
+      <div class="row row--between" style="padding-top:10px; border-top:1px solid var(--border); font-size:12px;">
+        <div class="row" style="gap:14px;">
+          <span class="mono muted">09:30 – 11:30</span>
+          <span class="mono"><b style="color:var(--ink); font-weight:500;">Elena C.</b></span>
+        </div>
+        <span class="mono" style="color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums;">$1,240</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="row row--between" style="align-items:flex-start;">
+        <div class="row" style="gap:10px; align-items:flex-start;">
+          <span class="list__avatar list__avatar--bone">JH</span>
+          <div>
+            <div style="font-weight:500; color:var(--ink); font-size:15px;">Jon Howe <span class="mono" style="color:var(--text-dim); font-size:11px; letter-spacing:0.04em;">· J-24083</span></div>
+            <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px;">Gilbert</div>
+          </div>
+        </div>
+        <span class="badge">scheduled</span>
+      </div>
+      <div class="row row--between" style="padding-top:10px; border-top:1px solid var(--border); font-size:12px;">
+        <div class="row" style="gap:14px;">
+          <span class="mono muted">13:00 – 15:00</span>
+          <span class="mono"><b style="color:var(--ink); font-weight:500;">Marcus R.</b></span>
+        </div>
+        <span class="mono" style="color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums;">$420</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="row row--between" style="align-items:flex-start;">
+        <div class="row" style="gap:10px; align-items:flex-start;">
+          <span class="list__avatar list__avatar--signal">MN</span>
+          <div>
+            <div style="font-weight:500; color:var(--ink); font-size:15px;">Mia Nguyen <span class="mono" style="color:var(--text-dim); font-size:11px; letter-spacing:0.04em;">· J-24084</span></div>
+            <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px;">Scottsdale · Install</div>
+          </div>
+        </div>
+        <span class="badge">install</span>
+      </div>
+      <div class="row row--between" style="padding-top:10px; border-top:1px solid var(--border); font-size:12px;">
+        <div class="row" style="gap:14px;">
+          <span class="mono muted">14:30 – 16:30</span>
+          <span class="mono"><b style="color:var(--ink); font-weight:500;">Dylan S.</b></span>
+        </div>
+        <span class="mono" style="color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums;">$3,180</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="row row--between" style="align-items:flex-start;">
+        <div class="row" style="gap:10px; align-items:flex-start;">
+          <span class="list__avatar list__avatar--bone">AO</span>
+          <div>
+            <div style="font-weight:500; color:var(--ink); font-size:15px;">Ana Ortiz <span class="mono" style="color:var(--text-dim); font-size:11px; letter-spacing:0.04em;">· J-24085</span></div>
+            <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px;">Tempe · Diagnostic</div>
+          </div>
+        </div>
+        <span class="badge badge--paused">unassigned</span>
+      </div>
+      <div class="row row--between" style="padding-top:10px; border-top:1px solid var(--border); font-size:12px;">
+        <div class="row" style="gap:14px;">
+          <span class="mono muted">16:30 – 18:00</span>
+          <span class="mono" style="color:var(--text-dim);">no tech</span>
+        </div>
+        <span class="mono" style="color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums;">$240</span>
+      </div>
+    </article>
+
+    <button class="btn btn--ghost btn--wide btn--small">View map of crew →</button>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Operations tabs">
+    <a class="tabbar__item" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="6" rx="1.5"/><rect x="3" y="15" width="8" height="6" rx="1.5"/><rect x="13" y="11" width="8" height="10" rx="1.5"/></svg>
+      Dashboard
+    </a>
+    <a class="tabbar__item is-active" href="dispatch.html">
+      <span class="tabbar__item-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
+        Dispatch
+        <span class="tabbar__dot"></span>
+      </span>
+    </a>
+    <a class="tabbar__item" href="crm.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+      CRM
+    </a>
+    <a class="tabbar__item" href="payments.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20"/></svg>
+      Pay
+    </a>
+    <a class="tabbar__item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></svg>
+      More
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

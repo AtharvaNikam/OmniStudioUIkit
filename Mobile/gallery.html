@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Mobile · Screen gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body { display: block; padding: 56px 24px 80px; }
+  .index-wrap { max-width: 1180px; margin: 0 auto; }
+  @media (max-width: 460px) { body { padding: 0; } .index-wrap { padding: 0; } }
+</style>
+</head>
+<body>
+
+<div class="index-wrap">
+
+  <header class="index-hero">
+    <span class="eyebrow">Mobile · screen gallery</span>
+    <h1>Eight screens, <em>two workspaces.</em></h1>
+    <p>Studio (the after-hours agent console) and Operations (the run-the-shop dashboard), both phone-native and brand-aligned.</p>
+    <a class="btn btn--ghost btn--small" href="index.html" style="margin-top:8px;">← Back to sign-in</a>
+  </header>
+
+  <div class="gallery">
+
+    <div class="gallery__group">
+      <div class="gallery__caption">
+        <span class="eyebrow">Studio · agent console</span>
+        <h2>Brief the <em>after-hours team.</em></h2>
+        <p>Hire, brief, and watch your AI roster work the lines while you sleep.</p>
+      </div>
+
+      <nav class="screen-links" aria-label="Studio screens">
+        <a href="studio/index.html">Home · composer <span class="arrow">→</span></a>
+        <a href="studio/agents.html">Agents roster <span class="arrow">→</span></a>
+        <a href="studio/agent-detail.html">Agent detail · Dispatcher <span class="arrow">→</span></a>
+        <a href="studio/channels.html">Lines &amp; channels <span class="arrow">→</span></a>
+      </nav>
+    </div>
+
+    <div class="gallery__group">
+      <div class="gallery__caption">
+        <span class="eyebrow">Operations · business app</span>
+        <h2>Run the shop <em>from the truck.</em></h2>
+        <p>Today's revenue, today's board, today's A/R — from anywhere with signal.</p>
+      </div>
+
+      <nav class="screen-links" aria-label="Operations screens">
+        <a href="operations/index.html">Dashboard <span class="arrow">→</span></a>
+        <a href="operations/dispatch.html">Today's board · dispatch <span class="arrow">→</span></a>
+        <a href="operations/crm.html">CRM · customers <span class="arrow">→</span></a>
+        <a href="operations/payments.html">Payments &amp; A/R <span class="arrow">→</span></a>
+      </nav>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

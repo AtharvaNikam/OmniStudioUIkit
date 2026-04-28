@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Mobile · CRM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <header class="app-header">
+    <a class="app-header__back" href="index.html" aria-label="Back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">Customers · 1,284</span>
+      <span class="app-header__title">Every home <em>you've stood in.</em></span>
+    </div>
+    <button class="app-header__action" aria-label="New customer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+    </button>
+  </header>
+
+  <main class="content">
+
+    <label class="input">
+      <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="search" placeholder="Name, phone, address…" />
+    </label>
+
+    <div class="row" style="gap:6px; flex-wrap:wrap;">
+      <span class="chip" style="background:var(--ink); color:var(--ivory); border-color:var(--ink);">All</span>
+      <span class="chip">VIP · 48</span>
+      <span class="chip">Past 30d · 142</span>
+      <span class="chip">A/R open · 18</span>
+    </div>
+
+    <span class="eyebrow">A — recent</span>
+
+    <section class="card" style="padding:6px 16px;">
+      <div class="list">
+        <div class="list__row">
+          <span class="list__avatar">SM</span>
+          <div>
+            <span class="list__title">Sarah Marks</span>
+            <span class="list__sub">1204 E Oak · Phoenix</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--ink); font-weight:500;">$680</span><br><span class="list__meta--mute">today</span></div>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--slate">RP</span>
+          <div>
+            <span class="list__title">Ray Patel</span>
+            <span class="list__sub">Paradise Valley · 12 jobs</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--ink); font-weight:500;">$8.4k</span><br><span class="list__meta--mute">LTV</span></div>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--bone">JH</span>
+          <div>
+            <span class="list__title">Jon Howe</span>
+            <span class="list__sub">Gilbert · A/R 47d</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--danger); font-weight:500;">$2,480</span><br><span class="list__meta--mute">past 30d</span></div>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--signal">MN</span>
+          <div>
+            <span class="list__title">Mia Nguyen</span>
+            <span class="list__sub">Scottsdale · install booked</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--ink); font-weight:500;">$3,180</span><br><span class="list__meta--mute">14:30</span></div>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--bone">AO</span>
+          <div>
+            <span class="list__title">Ana Ortiz</span>
+            <span class="list__sub">Tempe · 2 jobs</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--ink); font-weight:500;">$240</span><br><span class="list__meta--mute">16:30</span></div>
+        </div>
+      </div>
+    </section>
+
+    <span class="eyebrow">VIP — recurring</span>
+
+    <section class="card" style="padding:6px 16px;">
+      <div class="list">
+        <div class="list__row">
+          <span class="list__avatar">DK</span>
+          <div>
+            <span class="list__title">Dana Kim</span>
+            <span class="list__sub">Arcadia · maintenance plan</span>
+          </div>
+          <span class="badge badge--signal">VIP</span>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--slate">TH</span>
+          <div>
+            <span class="list__title">Tomás Herrera</span>
+            <span class="list__sub">Mesa · 4-year customer</span>
+          </div>
+          <span class="badge badge--signal">VIP</span>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar">LB</span>
+          <div>
+            <span class="list__title">Lee Bautista</span>
+            <span class="list__sub">Chandler · 5★ × 7</span>
+          </div>
+          <span class="badge badge--signal">VIP</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Operations tabs">
+    <a class="tabbar__item" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="6" rx="1.5"/><rect x="3" y="15" width="8" height="6" rx="1.5"/><rect x="13" y="11" width="8" height="10" rx="1.5"/></svg>
+      Dashboard
+    </a>
+    <a class="tabbar__item" href="dispatch.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
+      Dispatch
+    </a>
+    <a class="tabbar__item is-active" href="crm.html">
+      <span class="tabbar__item-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+        CRM
+        <span class="tabbar__dot"></span>
+      </span>
+    </a>
+    <a class="tabbar__item" href="payments.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20"/></svg>
+      Pay
+    </a>
+    <a class="tabbar__item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></svg>
+      More
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

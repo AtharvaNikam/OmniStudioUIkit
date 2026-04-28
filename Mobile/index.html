@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Sign in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* ---- Login screen styles (scoped) ---- */
+  .login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 24px 32px;
+    background: var(--ivory);
+    overflow-y: auto;
+  }
+  .login__brand {
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+    padding: 18px 0 28px;
+  }
+  .login__mark {
+    width: 56px; height: 56px;
+    color: var(--ink);
+  }
+  .login__name {
+    font-family: var(--font-display);
+    font-size: 1.625rem;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+  }
+  .login__name .studio { color: var(--slate-400); font-weight: 400; }
+  .login__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .login__eyebrow::before, .login__eyebrow::after {
+    content: ''; width: 18px; height: 1px; background: currentColor; opacity: 0.5;
+  }
+
+  .login__welcome {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .login__welcome em { font-style: italic; color: var(--slate-400); font-weight: 400; }
+  .login__sub {
+    font-size: var(--fs-body-sm);
+    color: var(--text-mute);
+    line-height: 1.5;
+    text-align: center;
+    max-width: 32ch;
+    margin: 0 auto 26px;
+  }
+
+  .field {
+    display: flex; flex-direction: column; gap: 6px;
+    margin-bottom: 14px;
+  }
+  .field__label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+    padding-left: 4px;
+  }
+  .field__input {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 16px;
+    background: var(--paper);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--r-full);
+    color: var(--text-mute);
+    transition: border var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+  }
+  .field__input:focus-within {
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(10,14,18,0.04);
+  }
+  .field__input .icon { color: var(--slate-400); flex-shrink: 0; }
+  .field__input input {
+    flex: 1; min-width: 0;
+    border: 0; outline: 0; background: transparent;
+    font-size: var(--fs-body); color: var(--ink);
+  }
+  .field__input input::placeholder { color: var(--text-dim); }
+  .field__toggle {
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  .field__hint {
+    font-size: 11px;
+    color: var(--text-dim);
+    padding-left: 4px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .field__hint a { color: var(--signal-700); font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; }
+
+  .login__remember {
+    display: flex; align-items: center; gap: 10px;
+    margin: 4px 0 18px;
+    padding-left: 4px;
+  }
+  .checkbox {
+    width: 18px; height: 18px;
+    border: 1.5px solid var(--border-strong);
+    border-radius: 5px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--paper);
+    flex-shrink: 0;
+  }
+  .checkbox.is-on {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--ivory);
+  }
+  .login__remember label {
+    font-size: 12px; color: var(--text-mute);
+  }
+
+  .login__submit { width: 100%; padding: 14px 18px; font-size: var(--fs-body-sm); }
+
+  .divider {
+    display: flex; align-items: center; gap: 12px;
+    margin: 20px 0 16px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+  }
+  .divider::before, .divider::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  .sso { display: flex; flex-direction: column; gap: 10px; }
+  .sso__btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 12px 16px;
+    background: var(--paper);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--r-full);
+    font-size: var(--fs-body-sm);
+    color: var(--ink);
+    transition: background var(--dur-fast) var(--ease-out);
+  }
+  .sso__btn:hover { background: var(--bone-50); }
+  .sso__btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  .login__footnote {
+    margin-top: auto;
+    padding-top: 22px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+  .login__footnote a { color: var(--signal-700); }
+  .login__footnote .demo {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 10px;
+    color: var(--text-dim);
+  }
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <main class="login">
+
+    <div class="login__brand">
+      <svg class="login__mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" aria-hidden="true">
+        <circle cx="32" cy="32" r="28" stroke-width="1.4"/>
+        <circle cx="32" cy="32" r="20" stroke-width="1.4" stroke-dasharray="2 4"/>
+        <circle cx="32" cy="32" r="12" stroke-width="1.4"/>
+        <circle cx="32" cy="32" r="4" fill="currentColor"/>
+      </svg>
+      <span class="login__eyebrow">After-hours team · Live</span>
+      <span class="login__name">Omni<span class="studio">.studio</span></span>
+    </div>
+
+    <h1 class="login__welcome">Welcome back, <em>operator.</em></h1>
+    <p class="login__sub">Sign in to brief the team, work the board, and close the books — all from one console.</p>
+
+    <form action="operations/index.html" method="get" novalidate>
+
+      <div class="field">
+        <span class="field__label">Email</span>
+        <label class="field__input">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="M3 7l9 6 9-6"/>
+          </svg>
+          <input type="email" name="email" placeholder="you@phoenixhvac.com" autocomplete="email" required />
+        </label>
+      </div>
+
+      <div class="field">
+        <span class="field__label">Password</span>
+        <label class="field__input">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="11" width="16" height="9" rx="2"/>
+            <path d="M8 11V7a4 4 0 018 0v4"/>
+          </svg>
+          <input type="password" name="password" placeholder="••••••••••" autocomplete="current-password" required />
+          <button type="button" class="field__toggle" aria-label="Show password">Show</button>
+        </label>
+        <div class="field__hint">
+          <span>10+ characters</span>
+          <a href="#">Forgot?</a>
+        </div>
+      </div>
+
+      <div class="login__remember">
+        <span class="checkbox is-on" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <label>Keep me signed in on this device</label>
+      </div>
+
+      <button type="submit" class="btn btn--accent login__submit">
+        Sign in <span class="arrow">→</span>
+      </button>
+
+      <div class="divider">or continue with</div>
+
+      <div class="sso">
+        <a class="sso__btn" href="operations/index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="11" width="16" height="9" rx="2"/>
+            <path d="M8 11V7a4 4 0 018 0v4"/>
+            <circle cx="12" cy="15.5" r="1" fill="currentColor"/>
+          </svg>
+          Use a passkey
+        </a>
+        <a class="sso__btn" href="operations/index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="M7 9h10M7 13h6"/>
+          </svg>
+          Continue with SSO
+        </a>
+      </div>
+
+    </form>
+
+    <div class="login__footnote">
+      v3.4 · Phoenix HVAC<br />
+      <a class="demo" href="gallery.html">Demo · view all screens →</a>
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+  // toggle password reveal
+  document.querySelectorAll('.field__toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const input = btn.parentElement.querySelector('input');
+      if (!input) return;
+      const show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.textContent = show ? 'Hide' : 'Show';
+      btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+    });
+  });
+  // toggle remember-me
+  document.querySelectorAll('.login__remember .checkbox').forEach(cb => {
+    cb.addEventListener('click', () => cb.classList.toggle('is-on'));
+  });
+</script>
+
+</body>
+</html>

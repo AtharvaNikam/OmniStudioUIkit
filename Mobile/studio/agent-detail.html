@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Mobile · Dispatcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <header class="app-header">
+    <a class="app-header__back" href="agents.html" aria-label="Back to roster">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">Agent · Voice + SMS</span>
+      <span class="app-header__title">Dispatcher</span>
+    </div>
+    <button class="app-header__action" aria-label="Edit agent">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 113 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+    </button>
+  </header>
+
+  <main class="content">
+
+    <section class="card">
+      <div class="row" style="align-items:flex-start; gap:14px;">
+        <span class="agent-card__mark" style="width:48px;height:48px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 01-1 1H7a14 14 0 0010 10v-1a1 1 0 011-1h3a1 1 0 011 1v2a1 1 0 01-1 1A17 17 0 015 4z"/></svg>
+        </span>
+        <div style="flex:1; min-width:0;">
+          <div class="row" style="gap:8px; margin-bottom:6px;">
+            <span class="badge badge--live">live</span>
+            <span class="mono" style="font-size:10px; color:var(--text-dim); letter-spacing:0.12em; text-transform:uppercase;">v3.4 · since Mar 2</span>
+          </div>
+          <p style="font-size:13px; line-height:1.5; color:var(--text-mute); margin:0;">Answers every call under a second, loads ServiceTitan history, triages emergencies, and books the first morning slot.</p>
+        </div>
+      </div>
+    </section>
+
+    <span class="eyebrow">Last 24 hours</span>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-card__label">Calls handled</span>
+        <div class="kpi-card__num">42</div>
+        <span class="kpi-card__delta kpi-card__delta--up">▲ 11 vs avg</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">Capture rate</span>
+        <div class="kpi-card__num">94<span class="unit">%</span></div>
+        <span class="kpi-card__delta kpi-card__delta--up">▲ 3 pts</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">Booked</span>
+        <div class="kpi-card__num">28</div>
+        <span class="kpi-card__delta kpi-card__delta--up">▲ $5.4k</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">Avg latency</span>
+        <div class="kpi-card__num">0.8<span class="unit">s</span></div>
+        <span class="kpi-card__delta kpi-card__delta--flat" style="color:var(--text-dim);">stable</span>
+      </div>
+    </div>
+
+    <span class="eyebrow">Configuration</span>
+
+    <section class="card" style="gap:0; padding:6px 14px;">
+      <div class="row row--between" style="padding:14px 0; border-bottom:1px solid var(--border);">
+        <div>
+          <div style="font-weight:500; color:var(--ink); font-size:14px;">Hours</div>
+          <div class="mono" style="font-size:11px; color:var(--text-dim); margin-top:2px;">8 PM – 7 AM · 7 days</div>
+        </div>
+        <span class="mono" style="color:var(--signal-700); font-size:11px;">Edit →</span>
+      </div>
+      <div class="row row--between" style="padding:14px 0; border-bottom:1px solid var(--border);">
+        <div>
+          <div style="font-weight:500; color:var(--ink); font-size:14px;">Voice</div>
+          <div class="mono" style="font-size:11px; color:var(--text-dim); margin-top:2px;">Marcus · warm · 0.95× speed</div>
+        </div>
+        <span class="mono" style="color:var(--signal-700); font-size:11px;">Edit →</span>
+      </div>
+      <div class="row row--between" style="padding:14px 0; border-bottom:1px solid var(--border);">
+        <div>
+          <div style="font-weight:500; color:var(--ink); font-size:14px;">Connectors</div>
+          <div class="mono" style="font-size:11px; color:var(--text-dim); margin-top:2px;">ServiceTitan · Twilio · Stripe</div>
+        </div>
+        <span class="badge badge--live" style="font-size:9px;">3 live</span>
+      </div>
+      <div class="row row--between" style="padding:14px 0;">
+        <div>
+          <div style="font-weight:500; color:var(--ink); font-size:14px;">Escalation</div>
+          <div class="mono" style="font-size:11px; color:var(--text-dim); margin-top:2px;">Marcus R. · Elena C. · You</div>
+        </div>
+        <span class="mono" style="color:var(--signal-700); font-size:11px;">Edit →</span>
+      </div>
+    </section>
+
+    <span class="eyebrow">Recent activity</span>
+
+    <section class="card" style="padding:4px 16px;">
+      <div class="feed">
+        <div class="feed__item">
+          <span class="feed__dot feed__dot--pulse">✓</span>
+          <span class="feed__body"><strong>Booked</strong> Sarah M. · 7 AM slot <span>· $680 · Marcus</span></span>
+          <span class="feed__time">11s</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot feed__dot--ink">!</span>
+          <span class="feed__body"><strong>Triaged</strong> gas-leak call · routed to Elena <span>· 1821 W Caron</span></span>
+          <span class="feed__time">14m</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot feed__dot--signal">$</span>
+          <span class="feed__body"><strong>Quoted</strong> $3,180 install · Mia N. <span>· follow-up scheduled</span></span>
+          <span class="feed__time">38m</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot">•</span>
+          <span class="feed__body"><strong>Missed</strong> – call routed to voicemail (line busy) <span>· R. Patel</span></span>
+          <span class="feed__time">1h</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="row" style="gap:10px; margin-top:6px;">
+      <button class="btn btn--ghost btn--small" style="flex:1;">Pause agent</button>
+      <button class="btn btn--accent btn--small" style="flex:1;">Brief agent <span class="arrow">→</span></button>
+    </div>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Studio tabs">
+    <a class="tabbar__item" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+      Studio
+    </a>
+    <a class="tabbar__item is-active" href="agents.html">
+      <span class="tabbar__item-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="3.5"/><circle cx="17" cy="9" r="3"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5"/><path d="M14 19c.5-2 2-3.5 4-3.5s3.5 1.5 4 3.5"/></svg>
+        Agents
+        <span class="tabbar__dot"></span>
+      </span>
+    </a>
+    <a class="tabbar__item" href="channels.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h14a1 1 0 011 1v10a1 1 0 01-1 1H8l-4 4V5a1 1 0 011-1z"/></svg>
+      Channels
+    </a>
+    <a class="tabbar__item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      Tasks
+    </a>
+    <a class="tabbar__item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></svg>
+      More
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>

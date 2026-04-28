@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Mobile · Payments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <header class="app-header">
+    <a class="app-header__back" href="index.html" aria-label="Back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">Ledger · April</span>
+      <span class="app-header__title">Payments &amp; <em>A/R.</em></span>
+    </div>
+    <button class="app-header__action" aria-label="Send invoice">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </button>
+  </header>
+
+  <main class="content">
+
+    <section class="card card--ink">
+      <span class="card__label">Open A/R · today</span>
+      <div style="font-family:var(--font-display); font-size:2rem; font-weight:500; letter-spacing:-0.03em; line-height:1; font-variant-numeric:tabular-nums;">$42,108<span style="font-family:var(--font-mono); font-size:0.55em; opacity:0.55; margin-left:3px;">.40</span></div>
+      <div class="row" style="gap:14px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.08); font-family:var(--font-mono); font-size:11px; letter-spacing:0.06em;">
+        <span style="color: rgba(255,255,255,0.55);">Past 30: <b style="color:var(--ivory); font-weight:500;">$18.4k</b></span>
+        <span style="color: rgba(255,255,255,0.55);">Past 60: <b style="color:#FCE4BD; font-weight:500;">$14.2k</b></span>
+        <span style="color: rgba(255,255,255,0.55);">Past 90: <b style="color:#F59E0B; font-weight:500;">$9.5k</b></span>
+      </div>
+    </section>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-card__label">Cleared · 7d</span>
+        <div class="kpi-card__num">$148.2k</div>
+        <span class="kpi-card__delta kpi-card__delta--up">▲ 18.4%</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">Concierge active</span>
+        <div class="kpi-card__num">23</div>
+        <span class="kpi-card__delta kpi-card__delta--flat" style="color:var(--text-dim);">3-touch live</span>
+      </div>
+    </div>
+
+    <div class="row row--between">
+      <span class="eyebrow">Recent invoices</span>
+      <span class="mono" style="font-size:10px; color:var(--text-dim); letter-spacing:0.12em; text-transform:uppercase;">last 24h</span>
+    </div>
+
+    <section class="card" style="padding:6px 16px;">
+      <div class="list">
+        <div class="list__row">
+          <span class="list__avatar list__avatar--bone" style="background:var(--signal-50); color:var(--signal-700); border-color:var(--signal-100);">$</span>
+          <div>
+            <span class="list__title">INV-9842 · Ray Patel</span>
+            <span class="list__sub">Stripe · Maintenance · cleared 11:42</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--ink); font-weight:500;">$1,120</span><br><span class="badge badge--live" style="font-size:9px; padding:2px 6px;">paid</span></div>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--bone" style="background:var(--signal-50); color:var(--signal-700); border-color:var(--signal-100);">$</span>
+          <div>
+            <span class="list__title">INV-9841 · Sarah Marks</span>
+            <span class="list__sub">Stripe · AC repair · cleared 09:08</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--ink); font-weight:500;">$680</span><br><span class="badge badge--live" style="font-size:9px; padding:2px 6px;">paid</span></div>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--bone">§</span>
+          <div>
+            <span class="list__title">INV-9811 · Jon Howe</span>
+            <span class="list__sub">Day-45 nudge sent · concierge</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--danger); font-weight:500;">$2,480</span><br><span class="badge badge--signal" style="font-size:9px; padding:2px 6px;">past 30</span></div>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--bone">§</span>
+          <div>
+            <span class="list__title">INV-9788 · Tomás Herrera</span>
+            <span class="list__sub">Day-62 · escalation tone</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--danger); font-weight:500;">$1,840</span><br><span class="badge badge--signal" style="font-size:9px; padding:2px 6px;">past 60</span></div>
+        </div>
+        <div class="list__row">
+          <span class="list__avatar list__avatar--bone">§</span>
+          <div>
+            <span class="list__title">INV-9712 · Lee Bautista</span>
+            <span class="list__sub">Day-94 · scheduled call</span>
+          </div>
+          <div class="list__meta"><span style="color:var(--danger); font-weight:500;">$3,260</span><br><span class="badge badge--signal" style="font-size:9px; padding:2px 6px;">past 90</span></div>
+        </div>
+      </div>
+    </section>
+
+    <span class="eyebrow">Concierge funnel · April</span>
+
+    <section class="card" style="padding:18px 16px; gap:10px;">
+      <div class="funnel-row">
+        <span class="funnel-row__label">Sent</span>
+        <span class="funnel-row__bar" style="width:100%;">182</span>
+        <span class="funnel-row__pct">100%</span>
+      </div>
+      <div class="funnel-row">
+        <span class="funnel-row__label">Day-30</span>
+        <span class="funnel-row__bar" style="width:78%; background:var(--ink-700);">142</span>
+        <span class="funnel-row__pct">78%</span>
+      </div>
+      <div class="funnel-row">
+        <span class="funnel-row__label">Day-45</span>
+        <span class="funnel-row__bar" style="width:52%; background:var(--ink-600);">94</span>
+        <span class="funnel-row__pct">52%</span>
+      </div>
+      <div class="funnel-row">
+        <span class="funnel-row__label">Cleared</span>
+        <span class="funnel-row__bar" style="width:38%; background:var(--signal); color:var(--ivory);">68</span>
+        <span class="funnel-row__pct">38%</span>
+      </div>
+    </section>
+
+    <button class="btn btn--accent btn--wide btn--small">Send statement <span class="arrow">→</span></button>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Operations tabs">
+    <a class="tabbar__item" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="6" rx="1.5"/><rect x="3" y="15" width="8" height="6" rx="1.5"/><rect x="13" y="11" width="8" height="10" rx="1.5"/></svg>
+      Dashboard
+    </a>
+    <a class="tabbar__item" href="dispatch.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
+      Dispatch
+    </a>
+    <a class="tabbar__item" href="crm.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+      CRM
+    </a>
+    <a class="tabbar__item is-active" href="payments.html">
+      <span class="tabbar__item-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20"/></svg>
+        Pay
+        <span class="tabbar__dot"></span>
+      </span>
+    </a>
+    <a class="tabbar__item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></svg>
+      More
+    </a>
+  </nav>
+
+</div>
+</body>
+</html>
