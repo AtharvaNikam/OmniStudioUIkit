@@ -199,6 +199,53 @@ input, textarea { font: inherit; color: inherit; }
 }
 
 /* ===========================================================
+   WORKSPACE SWITCHER — persistent across screens
+   Sits between status-bar and app-header on every authenticated
+   screen, so the operator can flip Studio ↔ Operations from anywhere.
+   =========================================================== */
+.workspace-switch {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding: 4px 18px 8px;
+  background: var(--ivory);
+  position: relative;
+  z-index: 4;
+}
+.workspace-switch__track {
+  display: inline-flex;
+  background: var(--bone-100);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-full);
+  padding: 3px;
+  gap: 2px;
+  box-shadow: var(--shadow-sm);
+}
+.workspace-switch__opt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 26px;
+  padding: 5px 16px;
+  border-radius: var(--r-full);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-mute);
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+.workspace-switch__opt:not(.is-active):hover { color: var(--ink); }
+.workspace-switch__opt.is-active {
+  background: var(--ink);
+  color: var(--ivory);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===========================================================
    APP HEADER — sticky, optional back arrow + actions
    =========================================================== */
 .app-header {
