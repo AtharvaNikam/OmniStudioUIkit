@@ -478,20 +478,23 @@ input, textarea { font: inherit; color: inherit; }
 
 /* date range — horizontal-scrollable on small frames */
 .date-range {
-  display: flex;
+  display: inline-flex;
   align-self: flex-start;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
   background: var(--bone-100);
   border: 1px solid var(--border-strong);
   border-radius: var(--r-full);
   padding: 4px;
   gap: 2px;
-  max-width: 100%;
   overflow-x: auto;
   scrollbar-width: none;
   box-shadow: var(--shadow-sm);
 }
 .date-range::-webkit-scrollbar { display: none; }
 .date-range button {
+  flex: 0 0 auto;
   padding: 8px 14px;
   border-radius: var(--r-full);
   font-family: var(--font-mono);
@@ -501,6 +504,7 @@ input, textarea { font: inherit; color: inherit; }
   text-transform: uppercase;
   color: var(--text-mute);
   white-space: nowrap;
+  text-align: center;
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
 .date-range button:hover { color: var(--ink); }
