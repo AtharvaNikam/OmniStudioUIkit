@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Mobile · Sarah Marks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <nav class="workspace-switch" aria-label="Workspace">
+    <div class="workspace-switch__track">
+      <a class="workspace-switch__opt" href="../studio/index.html">Studio</a>
+      <span class="workspace-switch__opt is-active">Operations</span>
+    </div>
+  </nav>
+
+  <header class="app-header">
+    <a class="app-header__back" href="crm.html" aria-label="Back to customers">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">Customer · since 2024</span>
+      <span class="app-header__title">Sarah Marks</span>
+    </div>
+    <button class="app-header__action" aria-label="More">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></svg>
+    </button>
+  </header>
+
+  <main class="content">
+
+    <section class="card" style="gap:12px;">
+      <div class="row" style="gap:14px; align-items:center;">
+        <span class="list__avatar" style="width:56px; height:56px; font-size:18px;">SM</span>
+        <div style="flex:1; min-width:0;">
+          <div style="font-family:var(--font-display); font-size:1.125rem; font-weight:500; color:var(--ink); letter-spacing:-0.015em;">Sarah Marks</div>
+          <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px;">1204 E Oak · Phoenix, AZ</div>
+          <div class="row" style="gap:6px; margin-top:6px;">
+            <span class="badge badge--signal">VIP</span>
+            <span class="mono" style="font-size:10px; color:var(--text-dim); letter-spacing:0.12em; text-transform:uppercase;">5 jobs · $4.8k LTV</span>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="gap:8px; padding-top:10px; border-top:1px solid var(--border);">
+        <a href="tel:+16025550142" class="btn btn--ghost btn--small" style="flex:1;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 01-1 1H7a14 14 0 0010 10v-1a1 1 0 011-1h3a1 1 0 011 1v2a1 1 0 01-1 1A17 17 0 015 4z"/></svg>
+          Call
+        </a>
+        <a href="sms:+16025550142" class="btn btn--ghost btn--small" style="flex:1;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 8l9 6 9-6"/></svg>
+          Text
+        </a>
+        <a href="job-new.html" class="btn btn--accent btn--small" style="flex:1;">Book job</a>
+      </div>
+    </section>
+
+    <div class="segmented" role="tablist" aria-label="Customer view" style="margin-bottom:0;">
+      <button class="segmented__option is-active" role="tab" aria-selected="true">Overview</button>
+      <button class="segmented__option" role="tab" aria-selected="false">Jobs · 5</button>
+      <button class="segmented__option" role="tab" aria-selected="false">Pay</button>
+      <button class="segmented__option" role="tab" aria-selected="false">Notes</button>
+    </div>
+
+    <span class="eyebrow">Lifetime</span>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-card__label">Total billed</span>
+        <div class="kpi-card__num">$4,820</div>
+        <span class="kpi-card__delta kpi-card__delta--up">▲ 5 jobs</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">Avg ticket</span>
+        <div class="kpi-card__num">$964</div>
+        <span class="kpi-card__delta kpi-card__delta--flat" style="color:var(--text-dim);">2024–26</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">A/R open</span>
+        <div class="kpi-card__num">$0</div>
+        <span class="kpi-card__delta kpi-card__delta--up" style="color:#047857;">paid up</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-card__label">Reviews</span>
+        <div class="kpi-card__num">4 <span class="unit">5★</span></div>
+        <span class="kpi-card__delta kpi-card__delta--up">▲ "brilliant"</span>
+      </div>
+    </div>
+
+    <span class="eyebrow">Property</span>
+    <section class="card" style="padding:14px 16px;">
+      <div class="row" style="align-items:flex-start; gap:12px;">
+        <div class="map-stage" style="height:120px; flex:1; min-width:0;">
+          <svg class="map-stage__svg" viewBox="0 0 200 120" preserveAspectRatio="none" aria-hidden="true">
+            <rect x="0" y="0" width="200" height="120" fill="url(#mg2)"/>
+            <defs>
+              <linearGradient id="mg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5efe1"/><stop offset="100%" stop-color="#e8e2d3"/></linearGradient>
+            </defs>
+            <path class="map-stage__roads" d="M0 40 Q 60 50 100 45 T 200 55"/>
+            <path class="map-stage__roads-secondary" d="M70 0 L 80 120"/>
+            <rect class="map-stage__block" x="20" y="60" width="60" height="30" rx="3"/>
+            <rect class="map-stage__block" x="100" y="65" width="80" height="40" rx="3"/>
+          </svg>
+          <span class="map-stage__pin" style="left: calc(50% - 18px); top: calc(50% - 18px);"></span>
+        </div>
+        <div style="flex:1;">
+          <div class="mono" style="font-size:10px; color:var(--text-dim); letter-spacing:0.12em; text-transform:uppercase;">House</div>
+          <div style="font-weight:500; color:var(--ink); font-size:14px; margin-top:2px;">Single-family</div>
+          <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px;">1996 · 2,200 sqft</div>
+          <div class="row" style="gap:4px; flex-wrap:wrap; margin-top:8px;">
+            <span class="chip" style="font-size:10px; padding:3px 8px;">Central AC</span>
+            <span class="chip" style="font-size:10px; padding:3px 8px;">Gas</span>
+            <span class="chip" style="font-size:10px; padding:3px 8px;">Smart stat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="eyebrow">Recent activity</span>
+    <section class="card" style="padding:4px 16px;">
+      <div class="feed">
+        <div class="feed__item">
+          <span class="feed__dot feed__dot--pulse">✓</span>
+          <span class="feed__body"><strong>Job booked</strong> · J-24081 · 7 AM tomorrow <span>· Marcus R.</span></span>
+          <span class="feed__time">11s</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot feed__dot--signal">$</span>
+          <span class="feed__body"><strong>INV-9841 cleared</strong> · $680 <span>· Stripe · today</span></span>
+          <span class="feed__time">9:08</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot">★</span>
+          <span class="feed__body"><strong>5★ review</strong> "Marcus was brilliant." <span>· Google</span></span>
+          <span class="feed__time">2d</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot">●</span>
+          <span class="feed__body"><strong>Voice call</strong> · 4 min · Dispatcher booked <span>· J-24081</span></span>
+          <span class="feed__time">2d</span>
+        </div>
+      </div>
+    </section>
+
+    <span class="eyebrow">Preferences</span>
+    <section class="card" style="padding:4px 16px;">
+      <div class="row row--between" style="padding:10px 0; border-bottom:1px solid var(--border);">
+        <span style="font-size:13px; color:var(--text-mute);">Best window</span>
+        <span class="mono" style="font-size:11px; color:var(--ink); font-weight:500;">Mornings · 7–11 AM</span>
+      </div>
+      <div class="row row--between" style="padding:10px 0; border-bottom:1px solid var(--border);">
+        <span style="font-size:13px; color:var(--text-mute);">Quiet hours</span>
+        <span class="mono" style="font-size:11px; color:var(--ink); font-weight:500;">9 PM — 7 AM</span>
+      </div>
+      <div class="row row--between" style="padding:10px 0; border-bottom:1px solid var(--border);">
+        <span style="font-size:13px; color:var(--text-mute);">Auto-approve up to</span>
+        <span class="mono" style="font-size:11px; color:var(--ink); font-weight:500;">$500</span>
+      </div>
+      <div class="row row--between" style="padding:10px 0;">
+        <span style="font-size:13px; color:var(--text-mute);">Comms</span>
+        <span class="mono" style="font-size:11px; color:var(--ink); font-weight:500;">Text · then call</span>
+      </div>
+    </section>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Operations tabs">
+    <a class="tabbar__item" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="6" rx="1.5"/><rect x="3" y="15" width="8" height="6" rx="1.5"/><rect x="13" y="11" width="8" height="10" rx="1.5"/></svg>Dashboard</a>
+    <a class="tabbar__item" href="dispatch.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg>Dispatch</a>
+    <a class="tabbar__item is-active" href="crm.html">
+      <span class="tabbar__item-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+        CRM
+        <span class="tabbar__dot"></span>
+      </span>
+    </a>
+    <a class="tabbar__item" href="payments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20"/></svg>Pay</a>
+    <a class="tabbar__item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></svg>More</a>
+  </nav>
+
+</div>
+</body>
+</html>

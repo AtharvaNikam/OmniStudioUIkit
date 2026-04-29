@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Phoenix HVAC — Share your location</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <main class="public-shell">
+
+    <div class="public-shell__brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <circle cx="12" cy="12" r="9"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+      </svg>
+      <span>Omni<span class="studio">.studio</span> · Phoenix HVAC</span>
+    </div>
+
+    <span class="eyebrow" style="justify-content:center; margin-bottom:14px;">Job J-24081 · 7 AM tomorrow</span>
+
+    <h1>Hey Sarah — share <em>your location</em> so Marcus can find you?</h1>
+    <p style="margin-top:14px;">It helps the truck navigate the last few blocks. We use it once for this job, then it's gone.</p>
+
+    <section class="map-stage" style="width:100%; height:240px; margin: 26px 0 22px;">
+      <svg class="map-stage__svg" viewBox="0 0 360 240" preserveAspectRatio="none" aria-hidden="true">
+        <rect x="0" y="0" width="360" height="240" fill="url(#mg5)"/>
+        <defs>
+          <linearGradient id="mg5" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f5efe1"/>
+            <stop offset="100%" stop-color="#e8e2d3"/>
+          </linearGradient>
+        </defs>
+        <path class="map-stage__roads" d="M0 80 Q 80 90 180 85 T 360 100"/>
+        <path class="map-stage__roads" d="M0 170 Q 100 165 200 170 T 360 180"/>
+        <path class="map-stage__roads-secondary" d="M120 0 L 130 240"/>
+        <path class="map-stage__roads-secondary" d="M240 0 L 230 240"/>
+        <rect class="map-stage__block" x="20" y="100" width="80" height="50" rx="4"/>
+        <rect class="map-stage__block" x="140" y="100" width="80" height="50" rx="4"/>
+        <rect class="map-stage__block" x="260" y="105" width="80" height="45" rx="4"/>
+        <rect class="map-stage__block" x="20" y="190" width="100" height="40" rx="4"/>
+        <rect class="map-stage__block" x="240" y="195" width="100" height="35" rx="4"/>
+      </svg>
+      <span class="map-stage__pin" style="left: calc(50% - 18px); top: calc(50% - 28px);"></span>
+      <span class="map-stage__chip" style="top: 14px; left: 50%; transform: translateX(-50%);">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"/></svg>
+        Approximate · ±15m
+      </span>
+    </section>
+
+    <section class="card" style="width:100%; padding:14px 16px; gap:10px; text-align:left;">
+      <div class="row" style="gap:12px;">
+        <span style="display:inline-flex; width:30px; height:30px; border-radius:8px; background:var(--bone-100); align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+        </span>
+        <div>
+          <div style="font-weight:500; color:var(--ink); font-size:13px;">One-time only</div>
+          <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px; letter-spacing:0.04em;">Active until the truck arrives, then deleted.</div>
+        </div>
+      </div>
+      <div class="row" style="gap:12px;">
+        <span style="display:inline-flex; width:30px; height:30px; border-radius:8px; background:var(--bone-100); align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+        </span>
+        <div>
+          <div style="font-weight:500; color:var(--ink); font-size:13px;">Encrypted in transit</div>
+          <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px; letter-spacing:0.04em;">Only Marcus and the dispatcher can see it.</div>
+        </div>
+      </div>
+      <div class="row" style="gap:12px;">
+        <span style="display:inline-flex; width:30px; height:30px; border-radius:8px; background:var(--bone-100); align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+        <div>
+          <div style="font-weight:500; color:var(--ink); font-size:13px;">You can revoke anytime</div>
+          <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px; letter-spacing:0.04em;">Tap "stop sharing" in this page or in the SMS.</div>
+        </div>
+      </div>
+    </section>
+
+    <div style="width:100%; display:flex; flex-direction:column; gap:10px; margin-top:24px;">
+      <button id="share-btn" class="btn btn--accent btn--wide">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Share my location
+      </button>
+      <button class="btn btn--ghost btn--wide">No thanks · use the address only</button>
+    </div>
+
+    <p class="mono" style="font-size:10px; color:var(--text-dim); letter-spacing:0.1em; text-transform:uppercase; margin-top:22px;">Powered by Omni.studio</p>
+
+  </main>
+
+</div>
+
+<script>
+  const btn = document.getElementById('share-btn');
+  btn.addEventListener('click', () => {
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Sharing — Marcus has it';
+    btn.classList.remove('btn--accent');
+    btn.classList.add('btn--primary');
+    btn.disabled = true;
+  });
+</script>
+</body>
+</html>

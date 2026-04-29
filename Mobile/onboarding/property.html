@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Onboarding · Property</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <header class="app-header">
+    <a class="app-header__back" href="address.html" aria-label="Back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">Step 3 of 5 · Property</span>
+      <span class="app-header__title">Tell us about it</span>
+    </div>
+    <a class="app-header__action" href="../index.html" aria-label="Cancel">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M6 18L18 6"/></svg>
+    </a>
+  </header>
+
+  <div style="padding: 14px 18px 0;">
+    <div class="stepper">
+      <span class="stepper__dot is-done"></span>
+      <span class="stepper__dot is-done"></span>
+      <span class="stepper__dot is-current"></span>
+      <span class="stepper__dot"></span>
+      <span class="stepper__dot"></span>
+    </div>
+  </div>
+
+  <main class="content" style="padding-top:12px;">
+
+    <p class="section-subtitle" style="margin-top:0;">The right tech, the right truck, the right parts. Saves a return visit.</p>
+
+    <span class="eyebrow">Property type</span>
+    <div class="stack">
+      <button type="button" class="option-tile is-selected">
+        <span class="option-tile__icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v10a1 1 0 01-1 1h-5v-7H9v7H4a1 1 0 01-1-1V11z"/></svg>
+        </span>
+        <div class="option-tile__body">
+          <div class="option-tile__title">Single-family home</div>
+          <span class="option-tile__sub">Owner-occupied</span>
+        </div>
+        <span class="option-tile__check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      </button>
+      <button type="button" class="option-tile">
+        <span class="option-tile__icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="6" height="18"/><rect x="14" y="6" width="6" height="15"/><path d="M6 7h2M6 11h2M6 15h2M16 9h2M16 13h2M16 17h2"/></svg>
+        </span>
+        <div class="option-tile__body">
+          <div class="option-tile__title">Multi-unit / condo</div>
+          <span class="option-tile__sub">HOA · property manager</span>
+        </div>
+        <span class="option-tile__check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      </button>
+      <button type="button" class="option-tile">
+        <span class="option-tile__icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+        </span>
+        <div class="option-tile__body">
+          <div class="option-tile__title">Commercial / light industrial</div>
+          <span class="option-tile__sub">Restaurants, offices, shops</span>
+        </div>
+        <span class="option-tile__check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      </button>
+    </div>
+
+    <div class="form-field form-field--row" style="margin-top:6px;">
+      <div class="form-field" style="flex:1;">
+        <span class="form-field__label">Year built</span>
+        <label class="form-field__input">
+          <input type="text" inputmode="numeric" placeholder="1996" />
+        </label>
+      </div>
+      <div class="form-field" style="flex:1;">
+        <span class="form-field__label">Sq ft · approx</span>
+        <label class="form-field__input">
+          <input type="text" inputmode="numeric" placeholder="2,200" />
+        </label>
+      </div>
+    </div>
+
+    <span class="eyebrow" style="margin-top:6px;">Equipment on site</span>
+    <p style="font-size:11px; color:var(--text-dim); letter-spacing:0.04em; padding:0 4px; margin-top:-4px; font-family:var(--font-mono);">Tap any that apply</p>
+    <div class="row" style="flex-wrap:wrap; gap:6px;">
+      <span class="chip" style="background:var(--ink); color:var(--ivory); border-color:var(--ink);">Central AC · split</span>
+      <span class="chip" style="background:var(--ink); color:var(--ivory); border-color:var(--ink);">Gas furnace</span>
+      <span class="chip">Heat pump</span>
+      <span class="chip">Mini-split</span>
+      <span class="chip">Tankless water heater</span>
+      <span class="chip">Smart thermostat</span>
+      <span class="chip">Pool / spa heater</span>
+      <span class="chip">Generator</span>
+      <span class="chip">Solar</span>
+    </div>
+
+    <div class="form-field" style="margin-top:6px;">
+      <span class="form-field__label">Anything else worth knowing? · optional</span>
+      <label class="form-field__input">
+        <textarea placeholder="Big dog. Side gate code 1204. AC unit on the roof, ladder needed."></textarea>
+      </label>
+    </div>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Onboarding actions" style="grid-template-columns: auto 1fr; padding: 12px 18px 22px; gap:10px; height:auto;">
+    <a class="btn btn--ghost" href="address.html">Back</a>
+    <a class="btn btn--accent" href="preferences.html">Continue <span class="arrow">→</span></a>
+  </nav>
+
+</div>
+<script>
+  document.querySelectorAll('.chip').forEach(c => {
+    c.addEventListener('click', () => {
+      const on = c.style.background === 'var(--ink)' || c.style.background.includes('rgb(10');
+      if (on) { c.style.background = ''; c.style.color = ''; c.style.borderColor = ''; }
+      else { c.style.background = 'var(--ink)'; c.style.color = 'var(--ivory)'; c.style.borderColor = 'var(--ink)'; }
+    });
+  });
+  document.querySelectorAll('.option-tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      tile.parentElement.querySelectorAll('.option-tile').forEach(t => t.classList.remove('is-selected'));
+      tile.classList.add('is-selected');
+    });
+  });
+</script>
+</body>
+</html>

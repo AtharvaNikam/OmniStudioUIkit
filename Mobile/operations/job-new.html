@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Mobile · Book a job</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <nav class="workspace-switch" aria-label="Workspace">
+    <div class="workspace-switch__track">
+      <a class="workspace-switch__opt" href="../studio/index.html">Studio</a>
+      <span class="workspace-switch__opt is-active">Operations</span>
+    </div>
+  </nav>
+
+  <header class="app-header">
+    <a class="app-header__back" href="dispatch.html" aria-label="Back to board">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">New job · J-24091</span>
+      <span class="app-header__title">Book it</span>
+    </div>
+    <a class="app-header__action" href="dispatch.html" aria-label="Cancel">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M6 18L18 6"/></svg>
+    </a>
+  </header>
+
+  <main class="content">
+
+    <span class="eyebrow">Customer</span>
+    <button type="button" class="option-tile is-selected" style="padding:12px 14px;">
+      <span class="list__avatar" style="width:36px; height:36px;">SM</span>
+      <div class="option-tile__body">
+        <div class="option-tile__title">Sarah Marks</div>
+        <span class="option-tile__sub">1204 E Oak · Phoenix · 5 jobs</span>
+      </div>
+      <span class="mono" style="font-size:10px; color:var(--signal-700); letter-spacing:0.12em; text-transform:uppercase;">Change</span>
+    </button>
+
+    <span class="eyebrow">Service type</span>
+    <div class="row" style="flex-wrap:wrap; gap:6px;">
+      <span class="chip" style="background:var(--ink); color:var(--ivory); border-color:var(--ink);">AC repair</span>
+      <span class="chip">Maintenance</span>
+      <span class="chip">Diagnostic</span>
+      <span class="chip">Install</span>
+      <span class="chip">Emergency</span>
+      <span class="chip">Warranty</span>
+    </div>
+
+    <div class="form-field">
+      <span class="form-field__label">What's happening?</span>
+      <label class="form-field__input">
+        <textarea placeholder="AC stopped cooling around 2 PM. Sounds like the compressor is short-cycling. Smart thermostat reads 84°F."></textarea>
+      </label>
+    </div>
+
+    <span class="eyebrow">Window</span>
+    <div class="card" style="padding:14px 16px;">
+      <div class="row row--between" style="margin-bottom:10px;">
+        <span class="mono" style="font-size:11px; color:var(--text-dim); letter-spacing:0.12em; text-transform:uppercase;">Wed · Apr 24</span>
+        <a href="date-filter.html" class="mono" style="font-size:11px; color:var(--signal-700); letter-spacing:0.06em;">Change date →</a>
+      </div>
+      <div class="row" style="flex-wrap:wrap; gap:6px;">
+        <span class="chip">7–9 AM</span>
+        <span class="chip" style="background:var(--ink); color:var(--ivory); border-color:var(--ink);">9–11 AM</span>
+        <span class="chip">12–2 PM</span>
+        <span class="chip">2–4 PM</span>
+        <span class="chip">4–6 PM</span>
+      </div>
+      <p class="mono" style="font-size:11px; color:var(--text-dim); letter-spacing:0.04em; margin-top:10px;">Customer's preferred window: <b style="color:var(--ink); font-weight:500;">mornings 7–11 AM</b></p>
+    </div>
+
+    <span class="eyebrow">Tech · suggested by Smart Dispatch</span>
+    <div class="stack">
+      <button type="button" class="option-tile is-selected">
+        <span class="list__avatar option-tile__icon" style="background:var(--ink); color:var(--ivory); border:0; border-radius:50%;">MR</span>
+        <div class="option-tile__body">
+          <div class="option-tile__title">Marcus R.</div>
+          <span class="option-tile__sub">12 min away · 8 yrs HVAC · last visit Apr 12</span>
+        </div>
+        <span class="mono" style="font-size:10px; color:var(--signal-700); letter-spacing:0.12em; text-transform:uppercase;">Best fit</span>
+      </button>
+      <button type="button" class="option-tile">
+        <span class="list__avatar option-tile__icon" style="background:var(--slate-500); color:var(--ivory); border:0; border-radius:50%;">EC</span>
+        <div class="option-tile__body">
+          <div class="option-tile__title">Elena C.</div>
+          <span class="option-tile__sub">28 min away · diagnostic specialist</span>
+        </div>
+        <span class="option-tile__check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+      </button>
+    </div>
+
+    <span class="eyebrow">Estimated ticket</span>
+    <section class="card" style="padding:14px 16px; gap:8px;">
+      <div class="row row--between">
+        <span style="font-size:13px; color:var(--text-mute);">Diagnostic fee</span>
+        <span class="mono" style="font-size:13px; color:var(--ink); font-variant-numeric:tabular-nums;">$129</span>
+      </div>
+      <div class="row row--between">
+        <span style="font-size:13px; color:var(--text-mute);">Likely repair (avg)</span>
+        <span class="mono" style="font-size:13px; color:var(--ink); font-variant-numeric:tabular-nums;">$420 – $720</span>
+      </div>
+      <div class="row row--between" style="padding-top:8px; border-top:1px solid var(--border);">
+        <span style="font-weight:500; color:var(--ink); font-size:14px;">Estimated total</span>
+        <span class="mono" style="font-size:15px; color:var(--ink); font-weight:500; font-variant-numeric:tabular-nums;">$549 – $849</span>
+      </div>
+      <p class="mono" style="font-size:11px; color:var(--text-dim); letter-spacing:0.04em; margin-top:4px;">Auto-approved up to $500. Anything above that goes to Sarah for sign-off.</p>
+    </section>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Job actions" style="grid-template-columns: auto 1fr; padding: 12px 18px 22px; gap:10px; height:auto;">
+    <a class="btn btn--ghost" href="dispatch.html">Cancel</a>
+    <a class="btn btn--accent" href="job-detail.html">Confirm &amp; book <span class="arrow">→</span></a>
+  </nav>
+
+</div>
+<script>
+  document.querySelectorAll('.option-tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      tile.parentElement.querySelectorAll('.option-tile').forEach(t => t.classList.remove('is-selected'));
+      tile.classList.add('is-selected');
+    });
+  });
+  document.querySelectorAll('.chip').forEach(c => {
+    c.addEventListener('click', () => {
+      const inGroup = c.parentElement;
+      if (inGroup.children.length < 8) inGroup.querySelectorAll('.chip').forEach(x => { x.style.background=''; x.style.color=''; x.style.borderColor=''; });
+      c.style.background = 'var(--ink)';
+      c.style.color = 'var(--ivory)';
+      c.style.borderColor = 'var(--ink)';
+    });
+  });
+</script>
+</body>
+</html>

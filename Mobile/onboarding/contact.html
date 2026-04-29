@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Onboarding · Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <header class="app-header">
+    <a class="app-header__back" href="welcome.html" aria-label="Back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">Step 1 of 5 · Contact</span>
+      <span class="app-header__title">How we reach you</span>
+    </div>
+    <a class="app-header__action" href="../index.html" aria-label="Cancel">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M6 18L18 6"/></svg>
+    </a>
+  </header>
+
+  <div style="padding: 14px 18px 0;">
+    <div class="stepper">
+      <span class="stepper__dot is-current"></span>
+      <span class="stepper__dot"></span>
+      <span class="stepper__dot"></span>
+      <span class="stepper__dot"></span>
+      <span class="stepper__dot"></span>
+    </div>
+  </div>
+
+  <main class="content" style="padding-top: 12px;">
+
+    <p class="section-subtitle" style="margin-top:0;">We'll pull this whenever you call, text, or book. You'll never repeat yourself again.</p>
+
+    <div class="form-field">
+      <span class="form-field__label">Full name</span>
+      <label class="form-field__input">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+        <input type="text" placeholder="Sarah Marks" autocomplete="name" />
+      </label>
+    </div>
+
+    <div class="form-field">
+      <span class="form-field__label">Mobile number · primary</span>
+      <label class="form-field__input">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 01-1 1H7a14 14 0 0010 10v-1a1 1 0 011-1h3a1 1 0 011 1v2a1 1 0 01-1 1A17 17 0 015 4z"/></svg>
+        <input type="tel" placeholder="(602) 555-0142" autocomplete="tel" />
+      </label>
+      <span class="form-field__hint">Texts and calls go here.</span>
+    </div>
+
+    <div class="form-field">
+      <span class="form-field__label">Email</span>
+      <label class="form-field__input">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <input type="email" placeholder="sarah@example.com" autocomplete="email" />
+      </label>
+      <span class="form-field__hint">For invoices &amp; review requests only.</span>
+    </div>
+
+    <div class="form-field">
+      <span class="form-field__label">Alternate contact · optional</span>
+      <label class="form-field__input">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.5"/><circle cx="17" cy="9" r="3"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5"/></svg>
+        <input type="text" placeholder="Spouse, property manager, etc." />
+      </label>
+    </div>
+
+    <span class="eyebrow" style="margin-top:6px;">Communication preference</span>
+    <div class="stack">
+      <button type="button" class="option-tile is-selected">
+        <span class="option-tile__icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 8l9 6 9-6"/></svg>
+        </span>
+        <div class="option-tile__body">
+          <div class="option-tile__title">Text first, then call</div>
+          <span class="option-tile__sub">Most homeowners pick this</span>
+        </div>
+        <span class="option-tile__check">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+      </button>
+      <button type="button" class="option-tile">
+        <span class="option-tile__icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 011-1h2a1 1 0 011 1v3a1 1 0 01-1 1H7a14 14 0 0010 10v-1a1 1 0 011-1h3a1 1 0 011 1v2a1 1 0 01-1 1A17 17 0 015 4z"/></svg>
+        </span>
+        <div class="option-tile__body">
+          <div class="option-tile__title">Call only</div>
+          <span class="option-tile__sub">No SMS — important calls only</span>
+        </div>
+        <span class="option-tile__check">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+      </button>
+    </div>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Onboarding actions" style="grid-template-columns: auto 1fr; padding: 12px 18px 22px; gap:10px; height:auto;">
+    <a class="btn btn--ghost" href="welcome.html">Back</a>
+    <a class="btn btn--accent" href="address.html">Continue <span class="arrow">→</span></a>
+  </nav>
+
+</div>
+<script>
+  document.querySelectorAll('.option-tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      tile.parentElement.querySelectorAll('.option-tile').forEach(t => t.classList.remove('is-selected'));
+      tile.classList.add('is-selected');
+    });
+  });
+</script>
+</body>
+</html>

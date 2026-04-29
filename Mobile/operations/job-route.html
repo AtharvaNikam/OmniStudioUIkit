@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Mobile · En route</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <nav class="workspace-switch" aria-label="Workspace">
+    <div class="workspace-switch__track">
+      <a class="workspace-switch__opt" href="../studio/index.html">Studio</a>
+      <span class="workspace-switch__opt is-active">Operations</span>
+    </div>
+  </nav>
+
+  <header class="app-header">
+    <a class="app-header__back" href="job-detail.html" aria-label="Back to job">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">J-24081 · En route</span>
+      <span class="app-header__title">Marcus → Sarah M.</span>
+    </div>
+    <button class="app-header__action" aria-label="Recenter">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+    </button>
+  </header>
+
+  <main class="content" style="padding-top:14px;">
+
+    <section class="map-stage" style="height: 360px;">
+      <svg class="map-stage__svg" viewBox="0 0 360 360" preserveAspectRatio="none" aria-hidden="true">
+        <rect x="0" y="0" width="360" height="360" fill="url(#mg4)"/>
+        <defs>
+          <linearGradient id="mg4" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f5efe1"/>
+            <stop offset="100%" stop-color="#e8e2d3"/>
+          </linearGradient>
+        </defs>
+        <!-- Major roads -->
+        <path class="map-stage__roads" d="M0 80 Q 80 90 180 85 T 360 100"/>
+        <path class="map-stage__roads" d="M0 200 Q 100 195 200 200 T 360 215"/>
+        <path class="map-stage__roads" d="M0 290 Q 80 285 180 290 T 360 280"/>
+        <!-- Minor cross streets -->
+        <path class="map-stage__roads-secondary" d="M80 0 L 90 360"/>
+        <path class="map-stage__roads-secondary" d="M170 0 L 180 360"/>
+        <path class="map-stage__roads-secondary" d="M260 0 L 250 360"/>
+        <!-- Blocks -->
+        <rect class="map-stage__block" x="20" y="100" width="50" height="80" rx="3"/>
+        <rect class="map-stage__block" x="100" y="105" width="60" height="75" rx="3"/>
+        <rect class="map-stage__block" x="190" y="100" width="50" height="85" rx="3"/>
+        <rect class="map-stage__block" x="260" y="115" width="80" height="75" rx="3"/>
+        <rect class="map-stage__block" x="20" y="220" width="60" height="60" rx="3"/>
+        <rect class="map-stage__block" x="100" y="225" width="60" height="55" rx="3"/>
+        <rect class="map-stage__block" x="190" y="220" width="50" height="60" rx="3"/>
+        <rect class="map-stage__block" x="260" y="225" width="80" height="55" rx="3"/>
+        <!-- Route line from tech to customer -->
+        <path class="map-stage__route" d="M50 60 Q 90 110 130 160 Q 170 180 220 220 Q 250 240 280 250"/>
+      </svg>
+      <!-- Tech (Marcus) pin — ink, top left -->
+      <span class="map-stage__pin map-stage__pin--ink" style="left: 32px; top: 42px;"></span>
+      <span class="map-stage__chip" style="top: 8px; left: 70px;">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12l4-7h10l4 7-4 7H7l-4-7z"/></svg>
+        Marcus · Truck 4
+      </span>
+      <!-- Customer pin — amber, lower right -->
+      <span class="map-stage__pin" style="left: 262px; top: 232px;"></span>
+      <span class="map-stage__chip" style="top: 200px; right: 14px; background: var(--ink); color: var(--ivory); border-color: var(--ink);">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"/></svg>
+        1204 E Oak — Sarah
+      </span>
+
+      <div class="map-stage__overlay">
+        <div style="flex:1;">
+          <div class="map-stage__overlay__label">ETA</div>
+          <div class="map-stage__overlay__num">7:12 <span style="font-size:0.65em; color:var(--text-dim); font-family:var(--font-mono);">AM</span></div>
+        </div>
+        <div style="flex:1;">
+          <div class="map-stage__overlay__label">Distance</div>
+          <div class="map-stage__overlay__num">4.2 <span style="font-size:0.55em; color:var(--text-dim); font-family:var(--font-mono);">mi</span></div>
+        </div>
+        <div style="flex:1;">
+          <div class="map-stage__overlay__label">Speed</div>
+          <div class="map-stage__overlay__num">28 <span style="font-size:0.55em; color:var(--text-dim); font-family:var(--font-mono);">mph</span></div>
+        </div>
+      </div>
+    </section>
+
+    <span class="eyebrow">Customer location · shared</span>
+    <section class="card" style="padding:14px 16px; gap:10px;">
+      <div class="row row--between">
+        <div class="row" style="gap:10px; align-items:center;">
+          <span class="list__avatar list__avatar--bone" style="background:rgba(16,185,129,0.08); color:#047857; border-color:rgba(16,185,129,0.22);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </span>
+          <div>
+            <div style="font-weight:500; color:var(--ink); font-size:14px;">1204 E Oak St, Phoenix, AZ</div>
+            <div class="mono" style="font-size:11px; color:var(--text-mute); margin-top:2px;">Lat 33.4522 · Lng −112.0740 · ±5m</div>
+          </div>
+        </div>
+        <span class="badge badge--live" style="font-size:9px;">live</span>
+      </div>
+      <div class="row" style="padding-top:10px; border-top:1px solid var(--border); gap:14px; font-size:12px;">
+        <span class="mono" style="color:var(--text-dim);">Shared via SMS · 09:24</span>
+        <span class="mono" style="color:var(--text-dim); margin-left:auto;">Refreshed 2s ago</span>
+      </div>
+    </section>
+
+    <span class="eyebrow">Live updates</span>
+    <section class="card" style="padding:4px 16px;">
+      <div class="feed">
+        <div class="feed__item">
+          <span class="feed__dot feed__dot--pulse">→</span>
+          <span class="feed__body"><strong>Marcus</strong> turned on E Indian School Rd <span>· 0.4 mi to go</span></span>
+          <span class="feed__time">8s</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot feed__dot--signal">📍</span>
+          <span class="feed__body"><strong>Sarah</strong> shared her location <span>· accuracy ±5m</span></span>
+          <span class="feed__time">1m</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot">▴</span>
+          <span class="feed__body"><strong>Truck 4</strong> left depot <span>· 6:48 AM</span></span>
+          <span class="feed__time">14m</span>
+        </div>
+        <div class="feed__item">
+          <span class="feed__dot">●</span>
+          <span class="feed__body"><strong>SMS</strong> sent to Sarah · "Marcus is on the way, ETA 7:12" <span>· auto</span></span>
+          <span class="feed__time">14m</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="row" style="gap:10px;">
+      <a href="tel:+16025550142" class="btn btn--ghost btn--small" style="flex:1;">Call Sarah</a>
+      <a href="job-progress.html" class="btn btn--accent btn--small" style="flex:1;">Mark arrived <span class="arrow">→</span></a>
+    </div>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Operations tabs">
+    <a class="tabbar__item" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="10" rx="1.5"/><rect x="13" y="3" width="8" height="6" rx="1.5"/><rect x="3" y="15" width="8" height="6" rx="1.5"/><rect x="13" y="11" width="8" height="10" rx="1.5"/></svg>Dashboard</a>
+    <a class="tabbar__item is-active" href="dispatch.html">
+      <span class="tabbar__item-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
+        Dispatch
+        <span class="tabbar__dot"></span>
+      </span>
+    </a>
+    <a class="tabbar__item" href="crm.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>CRM</a>
+    <a class="tabbar__item" href="payments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 11h20"/></svg>Pay</a>
+    <a class="tabbar__item" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="18" cy="12" r="1.4" fill="currentColor"/></svg>More</a>
+  </nav>
+
+</div>
+</body>
+</html>

@@ -4,6 +4,11 @@ import { StudioHome } from "./app/studio/StudioHome";
 import { StudioAgents } from "./app/studio/StudioAgents";
 import { OperationsLayout } from "./app/operations/OperationsLayout";
 import { OperationsDashboard } from "./app/operations/Dashboard";
+import { CustomerProfile } from "./app/operations/CustomerProfile";
+import { JobDetail } from "./app/operations/JobDetail";
+import { JobNew } from "./app/operations/JobNew";
+import { JobRoute } from "./app/operations/JobRoute";
+import { DateFilter } from "./app/operations/DateFilter";
 import { Placeholder } from "./app/Placeholder";
 
 /**
@@ -37,6 +42,11 @@ export const router = createBrowserRouter([
       { path: "dispatch", element: <Placeholder eyebrow="Dispatch" title="Dispatch board" /> },
       { path: "field", element: <Placeholder eyebrow="Field App" title="Field app preview" /> },
       { path: "crm", element: <Placeholder eyebrow="Customers" title="CRM" /> },
+      { path: "customer/:id", element: <CustomerProfile /> },
+      { path: "jobs/new", element: <JobNew /> },
+      { path: "jobs/:id", element: <JobDetail /> },
+      { path: "jobs/:id/route", element: <JobRoute /> },
+      { path: "date-filter", element: <DateFilter /> },
       { path: "leads", element: <Placeholder eyebrow="Leads pipeline" title="Leads" /> },
       { path: "payments", element: <Placeholder eyebrow="Payments" title="Ledger" /> },
       { path: "accounting", element: <Placeholder eyebrow="Accounting" title="P&L + A/R" /> },

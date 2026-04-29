@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Omni Studio — Onboarding · Welcome</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="phone">
+
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">
+      <span class="bars"><span></span><span></span><span></span><span></span></span>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="none" aria-hidden="true">
+        <path d="M2 4 C 4 2 12 2 14 4" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M5 7 C 6.5 5.5 9.5 5.5 11 7" stroke="#0A0E12" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="9.5" r="0.8" fill="#0A0E12"/>
+      </svg>
+      <span class="battery"><span></span></span>
+    </span>
+  </div>
+
+  <header class="app-header">
+    <a class="app-header__back" href="../index.html" aria-label="Cancel onboarding">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M6 18L18 6"/></svg>
+    </a>
+    <div class="app-header__title-stack">
+      <span class="app-header__eyebrow">New customer · 0 of 5</span>
+      <span class="app-header__title">Welcome</span>
+    </div>
+    <span class="app-header__action" aria-hidden="true" style="background:transparent; border:0;"></span>
+  </header>
+
+  <main class="content">
+
+    <section style="text-align:center; padding:8px 8px 4px; display:flex; flex-direction:column; align-items:center; gap:14px;">
+      <span style="display:inline-flex; width:64px; height:64px; border-radius:50%; background:var(--ink); color:var(--ivory); align-items:center; justify-content:center;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+      </span>
+      <span class="eyebrow" style="justify-content:center;">Onboarding · 4–5 minutes</span>
+      <h1 style="font-family:var(--font-display); font-weight:500; font-size:1.75rem; letter-spacing:-0.025em; color:var(--ink); line-height:1.15;">
+        Let's set you up <em style="font-style:italic; color:var(--slate-400); font-weight:400;">properly.</em>
+      </h1>
+      <p style="color:var(--text-mute); font-size:var(--fs-body-sm); line-height:1.5; max-width:32ch;">A few details so we can answer the call, route the right tech, and bill the right account — without ever asking twice.</p>
+    </section>
+
+    <section class="card" style="margin-top:8px;">
+      <span class="eyebrow">What we'll cover</span>
+      <div class="timeline" style="margin-top:8px;">
+        <div class="timeline__item is-active">
+          <span class="timeline__dot">1</span>
+          <div class="timeline__body">
+            <div class="timeline__title">Contact details</div>
+            <div class="timeline__detail">Name, phone, email — how the team reaches you.</div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot">2</span>
+          <div class="timeline__body">
+            <div class="timeline__title timeline__title--mute">Service address</div>
+            <div class="timeline__detail">Where the work happens. We pin it on the map.</div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot">3</span>
+          <div class="timeline__body">
+            <div class="timeline__title timeline__title--mute">Property &amp; equipment</div>
+            <div class="timeline__detail">House, age, what's already installed.</div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot">4</span>
+          <div class="timeline__body">
+            <div class="timeline__title timeline__title--mute">Preferences</div>
+            <div class="timeline__detail">When to call, when to text, when to leave alone.</div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot">5</span>
+          <div class="timeline__body">
+            <div class="timeline__title timeline__title--mute">Confirm</div>
+            <div class="timeline__detail">Quick review and we're booked.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="mono" style="font-size:11px; color:var(--text-dim); letter-spacing:0.06em; text-align:center; margin-top:4px;">All data lives in your shop's account. Read our <a href="#" style="color:var(--signal-700);">privacy policy</a>.</p>
+
+  </main>
+
+  <nav class="tabbar" aria-label="Onboarding actions" style="grid-template-columns: 1fr; padding: 12px 18px 22px; gap:8px; height:auto;">
+    <a class="btn btn--accent btn--wide" href="contact.html">Get started <span class="arrow">→</span></a>
+  </nav>
+
+</div>
+</body>
+</html>

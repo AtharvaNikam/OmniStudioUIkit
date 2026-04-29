@@ -70,6 +70,17 @@ export function OperationsSidebar() {
         Customers
       </NavRow>
       <NavRow
+        to="/operations/jobs/new"
+        icon={
+          <svg {...iconProps}>
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <path d="M8 12h8M12 8v8" />
+          </svg>
+        }
+      >
+        Book a job
+      </NavRow>
+      <NavRow
         to="/operations/leads"
         icon={
           <svg {...iconProps}>
